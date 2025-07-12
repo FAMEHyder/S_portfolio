@@ -12,7 +12,7 @@ import { Card, CardContent, CardMedia } from '@mui/material';
 import landscape from '../image/12.jpg';
 import profilePic from '../image/1.jpeg'; // 👈 Add your overlay image here
 import { motion } from 'framer-motion';
-
+import logo from '../image/logo.png'
 
 export default function Home() {
 
@@ -23,7 +23,7 @@ export default function Home() {
         },
         {
             title: 'Logo Design',
-            image: 'https://img.icons8.com/color/96/logo.png',
+            image: logo,
         },
         {
             title: 'Banner & Poster',
@@ -128,7 +128,7 @@ export default function Home() {
                                         textTransform: "none",
                                     }}
                                 >
-                                    Start Building →
+                                    Build your Designe →
                                 </Button>
                             </Grid>
                             <Grid item>
@@ -146,7 +146,7 @@ export default function Home() {
                                         },
                                     }}
                                 >
-                                    Schedule Demo
+                                    Whatsapp
                                 </Button>
                             </Grid>
                         </Grid>
@@ -159,10 +159,9 @@ export default function Home() {
 
             <Box
                 sx={{
-                    mt: 10,
+                    
                     p: 4,
-                    borderRadius: 3,
-                    background: 'linear-gradient(to right, #1e3c72, #2a5298)',
+                    background: 'linear-gradient(to bottom, #121646ff, #131951ff, #141b5fff, #15233aff)',
                     color: 'white',
                     boxShadow: 4,
                 }}
