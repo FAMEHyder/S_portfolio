@@ -5,9 +5,9 @@ import {
     Stack,
     Typography,
     Grid,
-    
+
 } from "@mui/material";
-import {   Card, CardContent, CardMedia } from '@mui/material';
+import { Card, CardContent, CardMedia } from '@mui/material';
 
 import landscape from '../image/12.jpg';
 import profilePic from '../image/1.jpeg'; // 👈 Add your overlay image here
@@ -17,35 +17,35 @@ import { motion } from 'framer-motion';
 export default function Home() {
 
     const skills = [
-  {
-    title: 'Photoshop',
-    image: 'https://img.icons8.com/color/96/adobe-photoshop--v1.png',
-  },
-  {
-    title: 'Logo Design',
-    image: 'https://img.icons8.com/color/96/logo.png',
-  },
-  {
-    title: 'Banner & Poster',
-    image: 'https://img.icons8.com/color/96/poster.png',
-  },
-  {
-    title: 'Social Media Posts',
-    image: 'https://img.icons8.com/color/96/facebook-like.png',
-  },
-  {
-    title: 'Creative Layouts',
-    image: 'https://img.icons8.com/color/96/design.png',
-  },
-  {
-    title: 'Typography',
-    image: 'https://img.icons8.com/color/96/font.png',
-  },
-  {
-    title: 'Branding',
-    image: 'https://img.icons8.com/color/96/brand.png',
-  },
-];
+        {
+            title: 'Photoshop',
+            image: 'https://img.icons8.com/color/96/adobe-photoshop--v1.png',
+        },
+        {
+            title: 'Logo Design',
+            image: 'https://img.icons8.com/color/96/logo.png',
+        },
+        {
+            title: 'Banner & Poster',
+            image: 'https://img.icons8.com/color/96/poster.png',
+        },
+        {
+            title: 'Social Media Posts',
+            image: 'https://img.icons8.com/color/96/facebook-like.png',
+        },
+        {
+            title: 'Creative Layouts',
+            image: 'https://img.icons8.com/color/96/design.png',
+        },
+        {
+            title: 'Typography',
+            image: 'https://img.icons8.com/color/96/font.png',
+        },
+        {
+            title: 'Branding',
+            image: 'https://img.icons8.com/color/96/brand.png',
+        },
+    ];
 
 
 
