@@ -69,10 +69,11 @@ export default function HeroHome() {
 
                     {/* Subheading */}
                     <Typography variant="h6" color="white" maxWidth="md">
-                        I'm a visual storyteller who turns pixels into purpose. With a keen eye
-                        for balance, typography, and color, I design more than just "pretty
-                        things" — I craft meaningful experiences. Whether it's branding, web UI,
-                        or print, I bring clarity to chaos and creativity to every click.
+                        I'm a creative and detail-driven Graphics Designer specializing in Photoshop-based design work, 
+                        including logo creation, banners, posters, and social media posts. I transform ideas into bold, 
+                        scroll-stopping visuals that align with your brand and speak to your audience. Whether you need
+                        eye-catching marketing materials or a cohesive digital presence, I bring a sharp design sense and
+                        a fast turnaround to every project. Let’s collaborate and make your brand stand out!
                     </Typography>
 
                     {/* CTA Buttons */}
