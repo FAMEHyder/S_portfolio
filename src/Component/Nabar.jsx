@@ -9,38 +9,25 @@ import {
   Container,
   Avatar,
   Button,
-  Tooltip,
-  MenuItem,
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
-import profile from '../image/00000.png'; // Replace with your image path
-
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+import profile from '../image/00000.png'; // Update with your actual image path
 
 export default function Nabar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
-  const [anchorElUser, setAnchorElUser] = useState(null);
   const navigate = useNavigate();
 
   const handleclick = (path) => {
-    navigate(path); // Or use scrollIntoView for smooth scroll
+    navigate(path);
   };
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
 
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
   };
 
   return (
@@ -55,27 +42,11 @@ export default function Nabar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 
-          {/* Avatar on the left */}
+          {/* Avatar on the left — now acts as a link to home */}
           <Box sx={{ flexGrow: 0, mr: 2 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Siptain Kazmi" src={profile} sx={{ boxShadow: 2 }} />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              anchorEl={anchorElUser}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-              anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-              transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-              sx={{ mt: '45px' }}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+            <IconButton onClick={() => navigate('/')} sx={{ p: 0 }}>
+              <Avatar alt="Siptain Kazmi" src={profile} sx={{ boxShadow: 2 }} />
+            </IconButton>
           </Box>
 
           {/* Logo */}
@@ -115,18 +86,42 @@ export default function Nabar() {
               transformOrigin={{ vertical: 'top', horizontal: 'left' }}
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
-              <MenuItem onClick={() => { handleclick(); handleCloseNavMenu(); }}>
-                <Typography textAlign="center">Contact Me</Typography>
-              </MenuItem>
-              <MenuItem onClick={() => { window.location.href = '#education'; handleCloseNavMenu(); }}>
-                <Typography textAlign="center">Education</Typography>
-              </MenuItem>
-              <MenuItem onClick={() => { window.location.href = '#skills'; handleCloseNavMenu(); }}>
-                <Typography textAlign="center">Skills</Typography>
-              </MenuItem>
-              <MenuItem onClick={() => { window.location.href = '#gallery'; handleCloseNavMenu(); }}>
-                <Typography textAlign="center">Gallery</Typography>
-              </MenuItem>
+              <Button
+                fullWidth
+                onClick={() => {
+                  handleclick('./contact');
+                  handleCloseNavMenu();
+                }}
+              >
+                Contact Me
+              </Button>
+              <Button
+                fullWidth
+                onClick={() => {
+                  window.location.href = '#education';
+                  handleCloseNavMenu();
+                }}
+              >
+                Education
+              </Button>
+              <Button
+                fullWidth
+                onClick={() => {
+                  window.location.href = '#skills';
+                  handleCloseNavMenu();
+                }}
+              >
+                Skills
+              </Button>
+              <Button
+                fullWidth
+                onClick={() => {
+                  window.location.href = '#gallery';
+                  handleCloseNavMenu();
+                }}
+              >
+                Gallery
+              </Button>
             </Menu>
           </Box>
 
@@ -159,7 +154,7 @@ export default function Nabar() {
             }}
           >
             <Button
-              onClick={()=>handleclick('./contact')}
+              onClick={() => handleclick('./contact')}
               sx={{ my: 2, color: 'white', display: 'block' }}
             >
               Contact Me
