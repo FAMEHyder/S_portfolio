@@ -157,7 +157,7 @@ export default function Nabar() {
                 textDecoration: 'none',
               }}
             >
-              SIPTAIN
+              SIBTAIN
             </Typography>
           </Box>
         </Toolbar>
