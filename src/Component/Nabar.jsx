@@ -42,34 +42,15 @@ export default function Nabar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 
-          {/* Avatar on the left — now acts as a link to home */}
+          {/* Avatar on the left — routes to home */}
           <Box sx={{ flexGrow: 0, mr: 2 }}>
             <IconButton onClick={() => navigate('/')} sx={{ p: 0 }}>
               <Avatar alt="Siptain Kazmi" src={profile} sx={{ boxShadow: 2 }} />
             </IconButton>
           </Box>
 
-          {/* Logo */}
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="#home"
-            sx={{
-              mr: 4,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.2rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            SIPTAIN
-          </Typography>
-
-          {/* Mobile Menu Button */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          {/* Mobile Menu Icon */}
+          <Box sx={{ display: { xs: 'flex', md: 'none' }, flexGrow: 1 }}>
             <IconButton
               size="large"
               aria-label="menu"
@@ -125,26 +106,7 @@ export default function Nabar() {
             </Menu>
           </Box>
 
-          {/* Mobile Logo */}
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#home"
-            sx={{
-              flexGrow: 1,
-              display: { xs: 'flex', md: 'none' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.2rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            SIPTAIN
-          </Typography>
-
-          {/* Desktop Nav Buttons (hardcoded) */}
+          {/* Desktop Nav Buttons (centered) */}
           <Box
             sx={{
               flexGrow: 1,
@@ -177,6 +139,26 @@ export default function Nabar() {
             >
               Gallery
             </Button>
+          </Box>
+
+          {/* SIPTAIN Logo — aligned right */}
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="#home"
+              sx={{
+                ml: 2,
+                fontFamily: 'monospace',
+                fontWeight: 700,
+                letterSpacing: '.2rem',
+                color: 'inherit',
+                textDecoration: 'none',
+              }}
+            >
+              SIPTAIN
+            </Typography>
           </Box>
         </Toolbar>
       </Container>
