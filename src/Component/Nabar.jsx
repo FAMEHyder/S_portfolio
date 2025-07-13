@@ -147,7 +147,9 @@ export default function Nabar() {
               variant="h6"
               noWrap
               component="a"
-              onClick={() => handleclick('./contact')}
+              
+              onClick={() => handleclick('./')}
+              
               sx={{
                 ml: 2,
                 fontFamily: 'monospace',
@@ -155,6 +157,7 @@ export default function Nabar() {
                 letterSpacing: '.2rem',
                 color: 'inherit',
                 textDecoration: 'none',
+                cursor: 'pointer'
               }}
             >
               SIBTAIN
