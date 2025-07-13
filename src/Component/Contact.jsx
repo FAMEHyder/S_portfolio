@@ -14,15 +14,19 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ScheduleIcon from '@mui/icons-material/Schedule';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import backgroundImageUrl from '../image/11.jpeg';
 import emailjs from 'emailjs-com';
+import backgroundImageUrl from '../image/11.jpeg';
 
 const ContactUs = () => {
   const formik = useFormik({
-    initialValues: { name: '', email: '', message: '' },
+    initialValues: {
+      name: '',
+      email: '',
+      message: '',
+    },
     validationSchema: Yup.object({
       name: Yup.string().required('Name is required'),
-      email: Yup.string().email('Invalid email address').required('Email is required'),
+      email: Yup.string().email('Invalid email').required('Email is required'),
       message: Yup.string().required('Message is required'),
     }),
     onSubmit: (values, { resetForm }) => {
@@ -31,7 +35,7 @@ const ContactUs = () => {
           'service_bko45nn',
           'template_kuu4qem',
           {
-            to_name: 'IYEF',
+            to_name: 'SIBTAIN',
             from_name: values.name,
             from_email: values.email,
             message: values.message,
@@ -43,17 +47,18 @@ const ContactUs = () => {
           resetForm();
         })
         .catch(() => {
-          alert('Failed to send the message, please try again.');
+          alert('Failed to send the message. Please try again.');
         });
     },
   });
 
   return (
-    <Box>
-      {/* Top Image Banner */}
+    <Box mt={12}>
+      {/* Header Image */}
       <Box
         sx={{
           height: { xs: 180, md: 250 },
+          width: '100%',
           backgroundImage: `url(${backgroundImageUrl})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -62,21 +67,21 @@ const ContactUs = () => {
         }}
       />
 
-      {/* Two-column layout */}
       <Container maxWidth="lg">
         <Grid container spacing={4}>
-          {/* Contact Form */}
+          {/* Form Section */}
           <Grid item xs={12} md={7}>
-            <Paper elevation={3} sx={{ p: 4, background: 'linear-gradient(180deg, #ffffff, #f4f6f8)' }}>
-              <Typography variant="h5" gutterBottom fontWeight="bold">
-                Get in Touch
+            <Paper elevation={3} sx={{ p: 4, borderRadius: 2 }}>
+              <Typography variant="h5" fontWeight="bold" gutterBottom>
+                Send a Message
               </Typography>
+
               <form onSubmit={formik.handleSubmit}>
                 <Grid container spacing={2}>
                   <Grid item xs={12} sm={6}>
                     <TextField
                       fullWidth
-                      label="Full Name"
+                      label="Name"
                       name="name"
                       value={formik.values.name}
                       onChange={formik.handleChange}
@@ -99,9 +104,10 @@ const ContactUs = () => {
                     />
                   </Grid>
                 </Grid>
+
                 <TextField
                   fullWidth
-                  label="Your Message"
+                  label="Message"
                   name="message"
                   multiline
                   rows={4}
@@ -112,14 +118,16 @@ const ContactUs = () => {
                   helperText={formik.touched.message && formik.errors.message}
                   sx={{ mt: 2 }}
                 />
+
                 <Button
                   type="submit"
                   variant="contained"
                   fullWidth
                   sx={{
-                    mt: 2,
+                    mt: 3,
                     py: 1.5,
                     fontSize: '1rem',
+                    fontWeight: 'bold',
                   }}
                 >
                   Send Message
@@ -128,40 +136,32 @@ const ContactUs = () => {
             </Paper>
           </Grid>
 
-          {/* Contact Details */}
+          {/* Contact Info Section */}
           <Grid item xs={12} md={5}>
-            <Paper elevation={3} sx={{ p: 4, height: '100%' }}>
-              <Typography variant="h6" gutterBottom fontWeight="bold">
-                Contact Info
+            <Paper elevation={3} sx={{ p: 4, height: '100%', borderRadius: 2 }}>
+              <Typography variant="h6" fontWeight="bold" gutterBottom>
+                Contact Information
               </Typography>
-              <Divider sx={{ mb: 2 }} />
+              <Divider sx={{ mb: 3 }} />
 
-              <Box sx={{ mb: 3 }}>
+              <Box sx={{ mb: 2, display: 'flex', alignItems: 'center' }}>
                 <EmailIcon color="primary" sx={{ mr: 1 }} />
-                <Typography variant="body1" component="span">
-                  Syedsibtain@gmail.com
-                </Typography>
+                <Typography>Syedsibtain@gmail.com</Typography>
               </Box>
 
-              <Box sx={{ mb: 3 }}>
+              <Box sx={{ mb: 2, display: 'flex', alignItems: 'center' }}>
                 <PhoneIcon color="primary" sx={{ mr: 1 }} />
-                <Typography variant="body1" component="span">
-                  +92 3234232323232 +92 32324234234
-                </Typography>
+                <Typography>+92 323 4232323, +92 323 24234234</Typography>
               </Box>
 
-              <Box sx={{ mb: 3 }}>
+              <Box sx={{ mb: 2, display: 'flex', alignItems: 'center' }}>
                 <LocationOnIcon color="primary" sx={{ mr: 1 }} />
-                <Typography variant="body1" component="span">
-                  Skardu Baltistan
-                </Typography>
+                <Typography>Skardu, Baltistan</Typography>
               </Box>
 
-              <Box>
+              <Box sx={{ display: 'flex', alignItems: 'center' }}>
                 <ScheduleIcon color="primary" sx={{ mr: 1 }} />
-                <Typography variant="body1" component="span">
-                  Services available 24/7
-                </Typography>
+                <Typography>Available 24/7</Typography>
               </Box>
             </Paper>
           </Grid>

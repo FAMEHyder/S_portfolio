@@ -147,7 +147,7 @@ export default function Nabar() {
               variant="h6"
               noWrap
               component="a"
-              href="#home"
+              onClick={() => handleclick('./contact')}
               sx={{
                 ml: 2,
                 fontFamily: 'monospace',
