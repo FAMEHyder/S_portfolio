@@ -17,6 +17,7 @@ export default function HeroHome() {
     return (
     <Box component="section" py={{ xs: 8, md: 12 }} 
       sx={{
+        
     position: 'relative',
     backgroundImage: `url(${landscape})`,
     backgroundSize: 'cover',
@@ -40,14 +41,16 @@ export default function HeroHome() {
             variant="h3"
             fontWeight="bold"
             sx={{
-              background: "linear-gradient(to right, #E0E0E0, #9FA8DA, #FAFAFA, #7986CB, #E0E0E0)",
+              background: "linear-gradient(to right, #E0E0E0, #19bd7bff, #FAFAFA, #7986CB, #E0E0E0)",
               backgroundSize: "200% auto",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               animation: "gradient 6s linear infinite",
+
               "@keyframes gradient": {
                 "0%": { backgroundPosition: "0% center" },
                 "100%": { backgroundPosition: "200% center" },
+            
               },
             }}
           >
