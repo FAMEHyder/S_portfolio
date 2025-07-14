@@ -6,13 +6,33 @@ import {
   Typography,
   Grid,
 } from "@mui/material";
+// import landscape from '../image/00000.png'
+// import landscape from '../image/11.jpeg'
+import landscape from '../image/12.jpeg'
 
 export default function HeroHome() {
 
   
   
     return (
-    <Box component="section" py={{ xs: 8, md: 12 }}>
+    <Box component="section" py={{ xs: 8, md: 12 }} 
+      sx={{
+    position: 'relative',
+    backgroundImage: `url(${landscape})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    minHeight: '100vh',
+    zIndex: 0,
+    '&::before': {
+      content: '""',
+      position: 'absolute',
+      inset: 0,
+      backgroundColor: 'rgba(0, 0, 0, 0.5)', // 0.5 = 50% opacity
+      zIndex: -1,
+    },
+  }}
+>
       <Container maxWidth="lg">
         <Stack spacing={6} alignItems="center" textAlign="center">
           {/* Gradient Heading */}
@@ -31,13 +51,16 @@ export default function HeroHome() {
               },
             }}
           >
-            AI-driven tools for product teams
+            Syed Siptain Kazmi
           </Typography>
 
           {/* Subheading */}
-          <Typography variant="h6" color="text.secondary" maxWidth="md">
-            Our landing page template works on all devices, so you only have to
-            set it up once, and get beautiful results forever.
+          <Typography variant="h6" color="white" maxWidth="md">
+            I'm a visual storyteller who turns pixels into purpose. 
+            With a keen eye for balance, typography, and color, 
+            I design more than just "pretty things" — I craft meaningful
+            experiences. Whether it's branding, web UI, or print, I bring 
+            clarity to chaos and creativity to every click.
           </Typography>
 
           {/* CTA Buttons */}
