@@ -1,10 +1,16 @@
-import {Box,Button,Container,Typography,Grid,Card, CardContent, CardMedia} from "@mui/material";
+import {Box,Button,Container,Typography,Grid,Card, CardContent, CardMedia,CardActionArea} from "@mui/material";
 import { motion } from 'framer-motion';
 
 import landscape from '../image/12.jpg';
-import profilePic from '../image/1.jpeg'; // 👈 Add your overlay image here
 import logo from '../image/logo.png';
 import ProfilePic from '../image/sib.png'
+import landing1 from '../image/12.jpg';
+import ecommerce from '../image/12.jpg';
+import portfolio from '../image/12.jpg';
+import mobileapp from '../image/12.jpg';
+import dashboard from '../image/12.jpg';
+import blog from '../image/12.jpg';
+
 
 export default function Home() {
 
@@ -78,30 +84,30 @@ export default function Home() {
     const designs = [
   {
     title: 'Landing Page - SaaS',
-    image: require('../image/designs/landing1.jpg'),
+    image: landing1,
   },
   {
     title: 'E-commerce UI',
-    image: require('../image/designs/ecommerce.jpg'),
+    image: ecommerce,
   },
   {
     title: 'Portfolio UI',
-    image: require('../image/designs/portfolio.jpg'),
+    image: portfolio,
   },
   {
     title: 'Mobile App Design',
-    image: require('../image/designs/mobileapp.jpg'),
+    image: mobileapp,
   },
   {
     title: 'Admin Dashboard',
-    image: require('../image/designs/dashboard.jpg'),
+    image: dashboard,
   },
   {
     title: 'Blog Template',
-    image: require('../image/designs/blog.jpg'),
+    image: blog,
   },
-
 ];
+
 
     return (
         <Box>
@@ -306,16 +312,16 @@ export default function Home() {
         A selection of my top UI/UX and front-end designs
       </Typography>
 
-      <Grid container spacing={4}>
+      <Grid container spacing={4} justifyContent={'center'}>
         {designs.map((design, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Card
-              elevation={4}
+              elevation={9}
               sx={{
                 transition: 'transform 0.3s, box-shadow 0.3s',
+                boxShadow: '5px 5px 5px 5px gray',
                 '&:hover': {
                   transform: 'scale(1.03)',
-                  boxShadow: 6,
                 },
               }}
             >
@@ -326,11 +332,7 @@ export default function Home() {
                   alt={design.title}
                   height="240"
                 />
-                <Box p={2}>
-                  <Typography variant="subtitle1" fontWeight="bold">
-                    {design.title}
-                  </Typography>
-                </Box>
+               
               </CardActionArea>
             </Card>
           </Grid>
