@@ -48,6 +48,40 @@ export default function Home() {
     ];
 
 
+    const educationData = [
+        {
+            title: 'Matriculation',
+            school: 'The Grammar School, Lahore',
+            year: '2015 - 2017',
+            image: '/images/matric.jpg', // replace with your local/hosted image path
+        },
+        {
+            title: 'Intermediate (FSc Pre-Engineering)',
+            school: 'Punjab Group of Colleges',
+            year: '2017 - 2019',
+            image: '/images/fsc.jpg',
+        },
+        {
+            title: 'BS Computer Science',
+            school: 'COMSATS University Islamabad',
+            year: '2019 - 2023',
+            image: '/images/bs.jpg',
+        },
+    ];
+
+    const cardVariants = {
+        hidden: { opacity: 0, y: 40 },
+        visible: (i) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: i * 0.2,
+                type: 'spring',
+                stiffness: 50,
+            },
+        }),
+    };
+
 
     return (
         <Box>
@@ -159,7 +193,7 @@ export default function Home() {
 
             <Box
                 sx={{
-                    
+
                     p: 4,
                     background: 'linear-gradient(to bottom, #121646ff, #131951ff, #141b5fff, #15233aff)',
                     color: 'white',
@@ -192,6 +226,47 @@ export default function Home() {
                                     />
                                     <CardContent>
                                         <Typography variant="h6">{skill.title}</Typography>
+                                    </CardContent>
+                                </Card>
+                            </motion.div>
+                        </Grid>
+                    ))}
+                </Grid>
+            </Box>
+
+            {/* Education section  */}
+
+            <Box id="education" sx={{ py: 6, px: { xs: 2, md: 6 }, backgroundColor: '#f9f9f9' }}>
+                <Typography variant="h4" align="center" gutterBottom fontWeight={700}>
+                    🎓 My Education
+                </Typography>
+                <Grid container spacing={4} justifyContent="center">
+                    {educationData.map((edu, i) => (
+                        <Grid item xs={12} sm={6} md={4} key={i}>
+                            <motion.div
+                                custom={i}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                variants={cardVariants}
+                            >
+                                <Card elevation={4} sx={{ borderRadius: 4 }}>
+                                    <CardMedia
+                                        component="img"
+                                        height="180"
+                                        image={edu.image}
+                                        alt={edu.title}
+                                    />
+                                    <CardContent>
+                                        <Typography variant="h6" fontWeight="bold">
+                                            {edu.title}
+                                        </Typography>
+                                        <Typography variant="subtitle1" color="text.secondary">
+                                            {edu.school}
+                                        </Typography>
+                                        <Typography variant="caption" display="block" mt={1}>
+                                            {edu.year}
+                                        </Typography>
                                     </CardContent>
                                 </Card>
                             </motion.div>
