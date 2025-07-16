@@ -44,103 +44,13 @@ export default function Nabar() {
         <Toolbar disableGutters>
 
           {/* Avatar on the left — routes to home */}
-          <Box sx={{ flexGrow: 0, mr: 2 }}>
+          <Box sx={{ flexGrow: 1, mr: 2 }}>
             <IconButton onClick={() => navigate('/')} sx={{ p: 0 }}>
               <Avatar alt="Siptain Kazmi" src={profile} sx={{ boxShadow: 2 }} />
             </IconButton>
           </Box>
 
-          {/* Mobile Menu Icon */}
-          <Box sx={{ display: { xs: 'flex', md: 'none' }, flexGrow: 1 }}>
-            <IconButton
-              size="large"
-              aria-label="menu"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              anchorEl={anchorElNav}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
-              transformOrigin={{ vertical: 'top', horizontal: 'left' }}
-              sx={{ display: { xs: 'block', md: 'none' } }}
-            >
-              <Button
-                fullWidth
-                onClick={() => {
-                  handleclick('./contact');
-                  handleCloseNavMenu();
-                }}
-              >
-                Contact Me
-              </Button>
-              <Button
-                fullWidth
-                onClick={() => {
-                  window.location.href = '#education';
-                  handleCloseNavMenu();
-                }}
-              >
-                Education
-              </Button>
-              <Button
-                fullWidth
-                onClick={() => {
-                  window.location.href = '#skills';
-                  handleCloseNavMenu();
-                }}
-              >
-                Skills
-              </Button>
-              <Button
-                fullWidth
-                onClick={() => {
-                  window.location.href = '#gallery';
-                  handleCloseNavMenu();
-                }}
-              >
-                Gallery
-              </Button>
-            </Menu>
-          </Box>
-
-          {/* Desktop Nav Buttons (centered) */}
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: 'none', md: 'flex' },
-              justifyContent: 'center',
-              gap: 2,
-            }}
-          >
-            <Button
-              onClick={() => handleclick('./contact')}
-              sx={{ my: 2, color: 'white', display: 'block' }}
-            >
-              Contact Me
-            </Button>
-            <Button
-              onClick={() => (window.location.href = '#education')}
-              sx={{ my: 2, color: 'white', display: 'block' }}
-            >
-              Education
-            </Button>
-            <Button
-              onClick={() => (window.location.href = '#skills')}
-              sx={{ my: 2, color: 'white', display: 'block' }}
-            >
-              Skills
-            </Button>
-            <Button
-              onClick={() => (window.location.href = '#gallery')}
-              sx={{ my: 2, color: 'white', display: 'block' }}
-            >
-              Gallery
-            </Button>
-          </Box>
+      
 
           {/* SIPTAIN Logo — aligned right */}
           <Box sx={{ display: 'flex', alignItems: 'center' }}>

@@ -75,6 +75,34 @@ export default function Home() {
     };
 
 
+    const designs = [
+  {
+    title: 'Landing Page - SaaS',
+    image: require('../image/designs/landing1.jpg'),
+  },
+  {
+    title: 'E-commerce UI',
+    image: require('../image/designs/ecommerce.jpg'),
+  },
+  {
+    title: 'Portfolio UI',
+    image: require('../image/designs/portfolio.jpg'),
+  },
+  {
+    title: 'Mobile App Design',
+    image: require('../image/designs/mobileapp.jpg'),
+  },
+  {
+    title: 'Admin Dashboard',
+    image: require('../image/designs/dashboard.jpg'),
+  },
+  {
+    title: 'Blog Template',
+    image: require('../image/designs/blog.jpg'),
+  },
+
+];
+
     return (
         <Box>
             <Box
@@ -268,6 +296,47 @@ export default function Home() {
                     ))}
                 </Grid>
             </Box>
+
+            {/* Gallery section  */}
+            <Box py={10} px={3} sx={{ backgroundColor: '#f9f9f9' }}>
+      <Typography variant="h4" align="center" fontWeight="bold" gutterBottom>
+        My Best Designs
+      </Typography>
+      <Typography variant="body1" align="center" color="text.secondary" mb={4}>
+        A selection of my top UI/UX and front-end designs
+      </Typography>
+
+      <Grid container spacing={4}>
+        {designs.map((design, index) => (
+          <Grid item xs={12} sm={6} md={4} key={index}>
+            <Card
+              elevation={4}
+              sx={{
+                transition: 'transform 0.3s, box-shadow 0.3s',
+                '&:hover': {
+                  transform: 'scale(1.03)',
+                  boxShadow: 6,
+                },
+              }}
+            >
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  image={design.image}
+                  alt={design.title}
+                  height="240"
+                />
+                <Box p={2}>
+                  <Typography variant="subtitle1" fontWeight="bold">
+                    {design.title}
+                  </Typography>
+                </Box>
+              </CardActionArea>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
         </Box>
     );
 }

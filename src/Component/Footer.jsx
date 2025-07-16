@@ -72,7 +72,7 @@ const Footer = () => {
         <Grid container spacing={4}>
           {/* Contact Info Section */}
           <Grid item xs={12} md={6}>
-            <Paper elevation={3} sx={{ p: 4, borderRadius: 2, backgroundColor: 'rgba(0,0,0,0.7)' }}>
+            <Paper elevation={0} sx={{ p: 4,  backgroundColor:'transparent' }}>
               <Typography variant="h6" fontWeight="bold" gutterBottom color='white'>
                 Contact Information
               </Typography>
@@ -102,7 +102,7 @@ const Footer = () => {
 
           {/* Social Media Section */}
           <Grid item xs={12} md={6}>
-            <Paper elevation={3} sx={{ p: 4, borderRadius: 2, backgroundColor: 'rgba(0,0,0,0.7)' }}>
+            <Paper elevation={0} sx={{ p: 4, backgroundColor: 'transparent' }}>
               <Typography variant="h6" fontWeight="bold" gutterBottom color= 'white'>
                 Follow Us
               </Typography>
