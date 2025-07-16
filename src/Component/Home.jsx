@@ -93,7 +93,7 @@ export default function Home() {
                             variant="h3"
                             fontWeight="bold"
                             sx={{
-                                background: "linear-gradient(to right, #E0E0E0, #0ece37ff, #FAFAFA, #ba0fefff, #E0E0E0)",
+                                background: "linear-gradient(to right, #E0E0E0, #1e3c72, #FAFAFA, #98802aff, #E0E0E0)",
                                 backgroundSize: "200% auto",
                                 WebkitBackgroundClip: "text",
                                 WebkitTextFillColor: "transparent",
