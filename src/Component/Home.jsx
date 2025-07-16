@@ -105,67 +105,51 @@ export default function Home() {
                     },
                 }}
             >
-                <Container maxWidth="lg">
-                    <Stack spacing={4} alignItems="center" textAlign="center">
+                <Container sx ={{widtrh : '50%'}}>
+                    <Box
+                        display="flex"
+                        flexDirection={{ xs: 'column', md: 'row' }}
+                        alignItems="center"
+                        justifyContent="space-between"
+                        gap={4}
+                    >
+                        {/* Left Box: Text Content */}
+                        <Box flexGrow={1}>
+                            <Typography
+                                variant="h3"
+                                fontWeight="bold"
+                                sx={{
+                                    background: "linear-gradient(to right, #E0E0E0, #1e3c72, #FAFAFA, #98802aff, #E0E0E0)",
+                                    backgroundSize: "200% auto",
+                                    WebkitBackgroundClip: "text",
+                                    WebkitTextFillColor: "transparent",
+                                    animation: "gradient 6s linear infinite",
+                                    "@keyframes gradient": {
+                                        "0%": { backgroundPosition: "0% center" },
+                                        "100%": { backgroundPosition: "200% center" },
+                                    },
+                                }}
+                            >
+                                SYED SIBTAIN KAZMI
+                            </Typography>
 
-                        {/* Foreground Image (on top of landscape) */}
-                        <Box
-                            component="img"
-                            src={profilePic}
-                            alt="Profile"
-                            sx={{
-                                width: { xs: 120, md: 160 },
-                                height: { xs: 120, md: 160 },
-                                borderRadius: '50%',
-                                border: '4px solid white',
-                                boxShadow: 3,
-                            }}
-                        />
+                            <Typography variant="h6" color="white" mt={2} justifyContent={'space-around'}>
+                                I'm a creative and detail-driven Graphics Designer specializing in Photoshop-based design work,
+                                including logo creation, banners, posters, and social media posts. I transform ideas into bold,
+                                scroll-stopping visuals that align with your brand and speak to your audience. Whether you need
+                                eye-catching marketing materials or a cohesive digital presence, I bring a sharp design sense and
+                                a fast turnaround to every project. Let’s collaborate and make your brand stand out!
+                            </Typography>
 
-                        {/* Gradient Heading */}
-                        <Typography
-                            variant="h3"
-                            fontWeight="bold"
-                            sx={{
-                                background: "linear-gradient(to right, #E0E0E0, #1e3c72, #FAFAFA, #98802aff, #E0E0E0)",
-                                backgroundSize: "200% auto",
-                                WebkitBackgroundClip: "text",
-                                WebkitTextFillColor: "transparent",
-                                animation: "gradient 6s linear infinite",
-                                "@keyframes gradient": {
-                                    "0%": { backgroundPosition: "0% center" },
-                                    "100%": { backgroundPosition: "200% center" },
-                                },
-                            }}
-                        >
-                            SYED SIBTAIN KAZMI
-                        </Typography>
-
-                        {/* Subheading */}
-                        <Typography variant="h6" color="white" maxWidth="md">
-                            I'm a creative and detail-driven Graphics Designer specializing in Photoshop-based design work,
-                            including logo creation, banners, posters, and social media posts. I transform ideas into bold,
-                            scroll-stopping visuals that align with your brand and speak to your audience. Whether you need
-                            eye-catching marketing materials or a cohesive digital presence, I bring a sharp design sense and
-                            a fast turnaround to every project. Let’s collaborate and make your brand stand out!
-                        </Typography>
-
-                        {/* CTA Buttons */}
-                        <Grid container spacing={2} justifyContent="center">
-                            <Grid item>
+                            <Box mt={3} display="flex" gap={2} flexWrap="wrap">
                                 <Button
                                     variant="contained"
                                     color="primary"
                                     size="large"
-                                    sx={{
-                                        px: 4,
-                                        textTransform: "none",
-                                    }}
+                                    sx={{ px: 4, textTransform: "none" }}
                                 >
-                                    Build your Designe →
+                                    Build your Design →
                                 </Button>
-                            </Grid>
-                            <Grid item>
                                 <Button
                                     variant="outlined"
                                     size="large"
@@ -180,14 +164,31 @@ export default function Home() {
                                         },
                                     }}
                                 >
-                                    Whatsapp
+                                    WhatsApp
                                 </Button>
-                            </Grid>
-                        </Grid>
-                    </Stack>
-                </Container>
+                            </Box>
+                        </Box>
 
+                        {/* Right Box: Profile Image */}
+                        <Box sx={{width:'50%'}} >
+                            <Box
+                                component="img"
+                                src={profilePic}
+                                alt="Profile"
+                                sx={{
+                                    width: '90vh',
+                                    height: '90vh',
+                                    borderRadius: '5%',
+                                    border: '2px solid white',
+                                    boxShadow: 4,
+                                }}
+                            />
+                        </Box>
+                    </Box>
+                </Container>
             </Box>
+
+
 
             {/* skills section  */}
 
