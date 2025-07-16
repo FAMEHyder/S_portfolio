@@ -1,9 +1,8 @@
-import {Box,Button,Container,Stack,Typography,Grid,} from "@mui/material";
-import { Card, CardContent, CardMedia } from '@mui/material';
+import {Box,Button,Container,Typography,Grid,Card, CardContent, CardMedia} from "@mui/material";
+import { motion } from 'framer-motion';
 
 import landscape from '../image/12.jpg';
 import profilePic from '../image/1.jpeg'; // 👈 Add your overlay image here
-import { motion } from 'framer-motion';
 import logo from '../image/logo.png'
 
 export default function Home() {
