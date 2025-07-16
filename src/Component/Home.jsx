@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 
 import landscape from '../image/12.jpg';
 import profilePic from '../image/1.jpeg'; // 👈 Add your overlay image here
-import logo from '../image/logo.png'
+import logo from '../image/logo.png';
+import ProfilePic from '../image/sib.png'
 
 export default function Home() {
 
@@ -42,20 +43,20 @@ export default function Home() {
     const educationData = [
         {
             title: 'Matriculation',
-            school: 'The Grammar School, Lahore',
-            year: '2015 - 2017',
+            school: 'City Public School and College',
+            year: '2019-2020',
             image: '/images/matric.jpg', // replace with your local/hosted image path
         },
         {
-            title: 'Intermediate (FSc Pre-Engineering)',
-            school: 'Punjab Group of Colleges',
-            year: '2017 - 2019',
+            title: 'Intermediate ',
+            school: 'Degree College Skardu',
+            year: '2021-2022',
             image: '/images/fsc.jpg',
         },
         {
-            title: 'BS Computer Science',
-            school: 'COMSATS University Islamabad',
-            year: '2019 - 2023',
+            title: 'BS  Economics',
+            school: 'Boys Degree College Skardu',
+            year: '2023-Continue',
             image: '/images/bs.jpg',
         },
     ];
@@ -110,8 +111,9 @@ export default function Home() {
                                 variant="h3"
                                 fontWeight="bold"
                                 sx={{
-                                    background: "linear-gradient(to right, #E0E0E0, #1e3c72, #FAFAFA, #98802aff, #E0E0E0)",
+                                    background: "linear-gradient(to right, #E0E0E0, #1e3c72, #FAFAFA, #dca138, #E0E0E0)",
                                     backgroundSize: "200% auto",
+                                    fontWeight:800,
                                     WebkitBackgroundClip: "text",
                                     WebkitTextFillColor: "transparent",
                                     animation: "gradient 6s linear infinite",
@@ -121,7 +123,7 @@ export default function Home() {
                                     },
                                 }}
                             >
-                                SYED SIBTAIN KAZMI
+                                SYED SIBTAIN KAXMI
                             </Typography>
 
                             <Typography variant="h6" color="white" mt={2} justifyContent={'space-around'}>
@@ -164,14 +166,14 @@ export default function Home() {
                         <Box sx={{width:'50%'}} >
                             <Box
                                 component="img"
-                                src={profilePic}
+                                src={ProfilePic}
                                 alt="Profile"
                                 sx={{
-                                    width: '90vh',
+                                    width: '88vh',
                                     height: '90vh',
-                                    borderRadius: '5%',
-                                    border: '2px solid white',
-                                    boxShadow: 4,
+                                    // borderRadius: '5%',
+                                    borderBottom: '2px solid white',
+                                    // boxShadow: 4,
                                 }}
                             />
                         </Box>
