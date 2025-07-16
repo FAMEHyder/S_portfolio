@@ -1,12 +1,4 @@
-import {
-    Box,
-    Button,
-    Container,
-    Stack,
-    Typography,
-    Grid,
-
-} from "@mui/material";
+import {Box,Button,Container,Stack,Typography,Grid,} from "@mui/material";
 import { Card, CardContent, CardMedia } from '@mui/material';
 
 import landscape from '../image/12.jpg';
