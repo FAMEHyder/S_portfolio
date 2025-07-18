@@ -164,7 +164,7 @@ export default function Home() {
                                 I'm a creative and detail-driven Graphics Designer specializing in Photoshop-based design work,
                                 including logo creation, banners, peak to your audience. Whether you need
                                 eye-catching marketing mesenc sense and
-                                a fast turnaround to and make your brand stand out!
+                                a fast
                             </Typography>
 
                             <Box mt={3} display="flex" gap={2} flexWrap="wrap">
