@@ -161,7 +161,11 @@ export default function Home() {
                             </Typography>
 
                             <Typography variant="h6" color="white" mt={2} justifyContent={'space-around'}>
-                                
+                                I’m a passionate and detail-driven graphic designer with over 3 years of experience in creating impactful visual designs. Currently, I’m working as a Senior Graphic Designer at Netbots, where I lead branding and visual design projects for various clients across different industries.
+
+My expertise lies in logo design, brand identity, social media posts, marketing materials, and print design. I believe in blending creativity with clarity to deliver designs that not only look beautiful but also communicate effectively.
+
+I’ve worked with startups, businesses, and organizations to craft visuals that build trust and leave lasting impressions.
                             </Typography>
 
                             <Box mt={3} display="flex" gap={2} flexWrap="wrap">
