@@ -163,7 +163,7 @@ export default function Home() {
                             <Typography variant="h6" color="white" mt={2} justifyContent={'space-around'}>
                                 I'm a creative and detail-driven Graphics Designer specializing in Photoshop-based design work,
                                 including logo creation, banners, peak to your audience. Whether you need
-                                eye-catching marketing materialve digital presence, I bring a sharp design sense and
+                                eye-catching marketing mesence, I bring a sharp design sense and
                                 a fast turnaround to every project. Let’s collaborate and make your brand stand out!
                             </Typography>
 
