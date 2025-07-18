@@ -164,7 +164,7 @@ export default function Home() {
                                 I'm a creative and detail-driven Graphics Designer specializing in Photoshop-based design work,
                                 including logo creation, banners, posters, and social media posts. I transform ideas into bold,
                                 scroll-stopping visuals that align with your brand and speak to your audience. Whether you need
-                                eye-catching marketing materials or a cohesive digital presence, I bring a sharp design sense and
+                                eye-catching marketing materialve digital presence, I bring a sharp design sense and
                                 a fast turnaround to every project. Let’s collaborate and make your brand stand out!
                             </Typography>
 
