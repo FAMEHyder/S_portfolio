@@ -161,8 +161,7 @@ export default function Home() {
                             </Typography>
 
                             <Typography variant="h6" color="white" mt={2} justifyContent={'space-around'}>
-                                I'm a creative 
-                                a fast
+                                
                             </Typography>
 
                             <Box mt={3} display="flex" gap={2} flexWrap="wrap">
