@@ -161,9 +161,7 @@ export default function Home() {
                             </Typography>
 
                             <Typography variant="h6" color="white" mt={2} justifyContent={'space-around'}>
-                                I'm a creative and detail-driven Graphics Designer specializing in Photoshop-based design work,
-                                including logo creation, banners, peak to your audience. Whether you need
-                                eye-catching marketing mesenc sense and
+                                I'm a creative 
                                 a fast
                             </Typography>
 
