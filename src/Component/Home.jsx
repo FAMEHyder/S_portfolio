@@ -1,4 +1,4 @@
-import {Box,Button,Container,Typography,Grid,Card, CardContent, CardMedia,CardActionArea} from "@mui/material";
+import { Box, Button, Container, Typography, Grid, Card, CardContent, CardMedia, CardActionArea, Paper } from "@mui/material";
 import { motion } from 'framer-motion';
 
 import landscape from '../image/12.jpg';
@@ -10,7 +10,6 @@ import portfolio from '../image/12.jpg';
 import mobileapp from '../image/12.jpg';
 import dashboard from '../image/12.jpg';
 import blog from '../image/12.jpg';
-
 
 export default function Home() {
 
@@ -82,32 +81,66 @@ export default function Home() {
 
 
     const designs = [
-  {
-    title: 'Landing Page - SaaS',
-    image: landing1,
-  },
-  {
-    title: 'E-commerce UI',
-    image: ecommerce,
-  },
-  {
-    title: 'Portfolio UI',
-    image: portfolio,
-  },
-  {
-    title: 'Mobile App Design',
-    image: mobileapp,
-  },
-  {
-    title: 'Admin Dashboard',
-    image: dashboard,
-  },
-  {
-    title: 'Blog Template',
-    image: blog,
-  },
-];
+        {
+            title: 'Landing Page - SaaS',
+            image: landing1,
+        },
+        {
+            title: 'E-commerce UI',
+            image: ecommerce,
+        },
+        {
+            title: 'Portfolio UI',
+            image: portfolio,
+        },
+        {
+            title: 'Mobile App Design',
+            image: mobileapp,
+        },
+        {
+            title: 'Admin Dashboard',
+            image: dashboard,
+        },
+        {
+            title: 'Blog Template',
+            image: blog,
+        },
+    ];
 
+
+    const experiences = [
+        {
+            role: 'Graphic Designer',
+            company: 'Netbots Pvt. Ltd.',
+            duration: 'Feb 2022 – Present',
+            highlights: [
+                'Led design and branding for Netbots and its clients across software, hospitality, and education industries.',
+                'Created compelling visuals including logos, social media posts, posters, and marketing content.',
+                'Worked on high-impact projects for brands like Harriot Skardu and educational campaigns in Baltistan.',
+                'Ensured consistent visual identity across all platforms, increasing audience engagement and brand trust.',
+            ],
+        },
+        {
+            role: 'Graphic Designer (Contract)',
+            company: 'Rinor',
+            duration: '2023',
+            highlights: [
+                'Designed professional product mockups, packaging, and promotional materials.',
+                'Delivered design assets tailored to Rinor’s branding and marketing needs.',
+                'Maintained clear communication with their team to ensure timely and on-brand delivery.',
+            ],
+        },
+        {
+            role: 'Freelance Graphic Designer',
+            company: 'Remote / Multiple Clients',
+            duration: '2020 – Present',
+            highlights: [
+                'Collaborated with local and international clients on logo design, social media graphics, and branding.',
+                'Provided creative direction and complete visual solutions for startups and small businesses.',
+                'Known for adaptability, clean design, and strong visual storytelling.',
+            ],
+        },
+    ];
 
     return (
         <Box>
@@ -131,7 +164,7 @@ export default function Home() {
                     },
                 }}
             >
-                <Container sx ={{widtrh : '50%'}}>
+                <Container sx={{ widtrh: '50%' }}>
                     <Box
                         display="flex"
                         flexDirection={{ xs: 'column', md: 'row' }}
@@ -147,7 +180,7 @@ export default function Home() {
                                 sx={{
                                     background: "linear-gradient(to right, #E0E0E0, #1e3c72, #FAFAFA, #dca138, #E0E0E0)",
                                     backgroundSize: "200% auto",
-                                    fontWeight:800,
+                                    fontWeight: 800,
                                     WebkitBackgroundClip: "text",
                                     WebkitTextFillColor: "transparent",
                                     animation: "gradient 6s linear infinite",
@@ -163,9 +196,9 @@ export default function Home() {
                             <Typography variant="h6" color="white" mt={2} justifyContent={'space-around'}>
                                 I’m a passionate and detail-driven graphic designer with over 3 years of experience in creating impactful visual designs. Currently, I’m working as a Senior Graphic Designer at Netbots, where I lead branding and visual design projects for various clients across different industries.
 
-My expertise lies in logo design, brand identity, social media posts, marketing materials, and print design. I believe in blending creativity with clarity to deliver designs that not only look beautiful but also communicate effectively.
+                                My expertise lies in logo design, brand identity, social media posts, marketing materials, and print design. I believe in blending creativity with clarity to deliver designs that not only look beautiful but also communicate effectively.
 
-I’ve worked with startups, businesses, and organizations to craft visuals that build trust and leave lasting impressions.
+                                I’ve worked with startups, businesses, and organizations to craft visuals that build trust and leave lasting impressions.
                             </Typography>
 
                             <Box mt={3} display="flex" gap={2} flexWrap="wrap">
@@ -197,7 +230,7 @@ I’ve worked with startups, businesses, and organizations to craft visuals that
                         </Box>
 
                         {/* Right Box: Profile Image */}
-                        <Box sx={{width:'50%'}} >
+                        <Box sx={{ width: '50%' }} >
                             <Box
                                 component="img"
                                 src={ProfilePic}
@@ -305,40 +338,40 @@ I’ve worked with startups, businesses, and organizations to craft visuals that
 
             {/* Gallery section  */}
             <Box py={10} px={3} sx={{ backgroundColor: '#f9f9f9' }}>
-      <Typography variant="h4" align="center" fontWeight="bold" gutterBottom>
-        My Best Designs
-      </Typography>
-      <Typography variant="body1" align="center" color="text.secondary" mb={4}>
-        A selection of my top UI/UX and front-end designs
-      </Typography>
+                <Typography variant="h4" align="center" fontWeight="bold" gutterBottom>
+                    My Best Designs
+                </Typography>
+                <Typography variant="body1" align="center" color="text.secondary" mb={4}>
+                    A selection of my top UI/UX and front-end designs
+                </Typography>
 
-      <Grid container spacing={4} justifyContent={'center'}>
-        {designs.map((design, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
-            <Card
-              elevation={9}
-              sx={{
-                transition: 'transform 0.3s, box-shadow 0.3s',
-                boxShadow: '5px 5px 5px 5px gray',
-                '&:hover': {
-                  transform: 'scale(1.03)',
-                },
-              }}
-            >
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  image={design.image}
-                  alt={design.title}
-                  height="240"
-                />
-               
-              </CardActionArea>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
+                <Grid container spacing={4} justifyContent={'center'}>
+                    {designs.map((design, index) => (
+                        <Grid item xs={12} sm={6} md={4} key={index}>
+                            <Card
+                                elevation={9}
+                                sx={{
+                                    transition: 'transform 0.3s, box-shadow 0.3s',
+                                    boxShadow: '5px 5px 5px 5px gray',
+                                    '&:hover': {
+                                        transform: 'scale(1.03)',
+                                    },
+                                }}
+                            >
+                                <CardActionArea>
+                                    <CardMedia
+                                        component="img"
+                                        image={design.image}
+                                        alt={design.title}
+                                        height="240"
+                                    />
+
+                                </CardActionArea>
+                            </Card>
+                        </Grid>
+                    ))}
+                </Grid>
+            </Box>
         </Box>
     );
 }
