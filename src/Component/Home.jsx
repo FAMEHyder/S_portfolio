@@ -294,6 +294,8 @@ export default function Home() {
                     ))}
                 </Grid>
             </Box>
+
+            {/* Experiance section  */}
             <Box component="section" py={6} px={{ xs: 2, md: 6 }} bgcolor="#f8f9fa">
                 <Typography variant="h4" fontWeight="bold" gutterBottom>
                     Graphic Design Experience
@@ -320,6 +322,8 @@ export default function Home() {
                     ))}
                 </Grid>
             </Box>
+
+
             {/* Education section  */}
 
             <Box id="education" sx={{ py: 6, px: { xs: 2, md: 6 }, backgroundColor: '#f9f9f9' }}>
