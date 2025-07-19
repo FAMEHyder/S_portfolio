@@ -166,91 +166,95 @@ export default function Home() {
             >
                 <Container sx={{ widtrh: '50%' }}>
                     <Box
-  sx={{
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    textAlign: 'center',
-    px: 2,
-    py: 4,
-  }}
-  gap={4}
->
-  {/* Profile Image */}
-  <Box>
-    <Box
-      component="img"
-      src={ProfilePic}
-      alt="Profile"
-      sx={{
-        width: '60vh',
-        height: '60vh',
-        borderRadius: '50%',
-        border: '4px solid white',
-        boxShadow: 4,
-        objectFit: 'cover',
-      }}
-    />
-  </Box>
+                        sx={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            textAlign: 'center',
+                            px: 2,
+                            py: 4,
+                        }}
+                        gap={4}
+                    >
+                        {/* Profile Image */}
+                        <Box>
+                            <Box
+                                component="img"
+                                src={ProfilePic}
+                                alt="Profile"
+                                sx={{
+                                    width: '50vh',
+                                    height: '50vh',
+                                    borderRadius: '50%',
+                                    border: '6px solid white',
+                                    boxShadow: 4,
+                                    objectFit: 'contained',
+                                }}
+                            />
+                        </Box>
 
-  {/* Name and Description */}
-  <Box maxWidth="800px">
-    <Typography
-      variant="h3"
-      fontWeight="bold"
-      sx={{
-        background: "linear-gradient(to right, #E0E0E0, #1e3c72, #FAFAFA, #dca138, #E0E0E0)",
-        backgroundSize: "200% auto",
-        fontWeight: 800,
-        WebkitBackgroundClip: "text",
-        WebkitTextFillColor: "transparent",
-        animation: "gradient 6s linear infinite",
-        "@keyframes gradient": {
-          "0%": { backgroundPosition: "0% center" },
-          "100%": { backgroundPosition: "200% center" },
-        },
-      }}
-    >
-      SYED SIBTAIN KAXMI
-    </Typography>
+                        {/* Name and Description */}
+                        <Box maxWidth="100%">
+                            <Typography
+                                variant="h3"
+                                fontWeight="bold"
+                                sx={{
+                                    background: "linear-gradient(to right, #E0E0E0, #1e3c72, #FAFAFA, #dca138, #E0E0E0)",
+                                    backgroundSize: "200% auto",
+                                    fontWeight: 800,
+                                    WebkitBackgroundClip: "text",
+                                    WebkitTextFillColor: "transparent",
+                                    animation: "gradient 6s linear infinite",
+                                    "@keyframes gradient": {
+                                        "0%": { backgroundPosition: "0% center" },
+                                        "100%": { backgroundPosition: "200% center" },
+                                    },
+                                }}
+                            >
+                                SYED SIBTAIN KAXMI
+                            </Typography>
 
-    <Typography variant="h6" color="white" mt={2}>
-      I’m a passionate and detail-driven graphic designer with over 3 years of experience in creating impactful visual designs. Currently, I’m working as a Senior Graphic Designer at Netbots, where I lead branding and visual design projects for various clients across different industries.
-      <br /><br />
-      My expertise lies in logo design, brand identity, social media posts, marketing materials, and print design. I believe in blending creativity with clarity to deliver designs that not only look beautiful but also communicate effectively.
-      <br /><br />
-      I’ve worked with startups, businesses, and organizations to craft visuals that build trust and leave lasting impressions.
-    </Typography>
-  </Box>
+                            <Typography variant="h6" color="white" mt={2} sx={{width:'100%'}}>
+                                I’m a passionate and detail-driven graphic designer with over 3 years of experience in creating impactful visual designs. Currently, I’m working as a Senior Graphic Designer at Netbots, where I lead branding and visual design projects for various clients across different industries.
+                                <br /><br />
+                                My expertise lies in logo design, brand identity, social media posts, marketing materials, and print design. I believe in blending creativity with clarity to deliver designs that not only look beautiful but also communicate effectively.
+                                <br /><br />\
+                                I’ve worked with startups, businesses, and organizations to craft visuals that build trust and leave lasting impressions.
+                            </Typography>
+                        </Box>
 
-  {/* Buttons */}
-  <Box mt={3} display="flex" gap={2} flexWrap="wrap" justifyContent="center">
-    <Button
-      variant="contained"
-      color="primary"
-      size="large"
-      sx={{ px: 4, textTransform: "none" }}
-    >
-      Build your Design →
-    </Button>
-    <Button
-      variant="outlined"
-      size="large"
-      sx={{
-        px: 4,
-        textTransform: "none",
-        borderColor: "grey.700",
-        color: "grey.300",
-        "&:hover": {
-          borderColor: "grey.500",
-          backgroundColor: "rgba(255, 255, 255, 0.04)",
-        },
-      }}
-    >
-      WhatsApp
-    </Button>
-  </Box>
-</Box>
+                        {/* Buttons */}
+                        <Box mt={3} display="flex" gap={2} flexWrap="wrap" justifyContent="center">
+                            <Button
+                                variant="contained"
+                                color="primary"
+                                size="large"
+                                sx={{ px: 4, textTransform: "none" }}
+                            >
+                                Build your Design →
+                            </Button>
+                            <Button
+                                variant="outlined"
+                                size="large"
+                                href="https://wa.me/923407620765"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                sx={{
+                                    px: 4,
+                                    textTransform: "none",
+                                    borderColor: "grey.700",
+                                    color: "grey.300",
+                                    "&:hover": {
+                                        borderColor: "grey.500",
+                                        backgroundColor: "rgba(255, 255, 255, 0.04)",
+                                    },
+                                }}
+                            >
+                                WhatsApp
+                            </Button>
+
+                        </Box>
+                    </Box>
 
                 </Container>
             </Box>
@@ -333,7 +337,7 @@ export default function Home() {
 
             {/* Education section  */}
 
-            <Box id="education" sx={{ py: 6, px: { xs: 2, md: 6 }, backgroundColor: '#121646ff' }}>
+            <Box id="education" sx={{ py: 6, px: { xs: 2, md: 6 }, backgroundColor: '#dca138' }}>
                 <Typography variant="h4" align="center" gutterBottom fontWeight={700}>
                     🎓 My Education
                 </Typography>
