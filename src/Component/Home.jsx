@@ -294,7 +294,32 @@ export default function Home() {
                     ))}
                 </Grid>
             </Box>
-
+            <Box component="section" py={6} px={{ xs: 2, md: 6 }} bgcolor="#f8f9fa">
+                <Typography variant="h4" fontWeight="bold" gutterBottom>
+                    Graphic Design Experience
+                </Typography>
+                <Grid container spacing={4}>
+                    {experiences.map((exp, index) => (
+                        <Grid item xs={12} md={6} key={index}>
+                            <Paper elevation={2} sx={{ p: 3, borderRadius: 2, height: '100%' }}>
+                                <Typography variant="h6" fontWeight="bold">
+                                    {exp.role}
+                                </Typography>
+                                <Typography variant="subtitle1" color="text.secondary">
+                                    {exp.company} | {exp.duration}
+                                </Typography>
+                                <ul style={{ marginTop: 10 }}>
+                                    {exp.highlights.map((point, idx) => (
+                                        <li key={idx}>
+                                            <Typography variant="body2">{point}</Typography>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </Paper>
+                        </Grid>
+                    ))}
+                </Grid>
+            </Box>
             {/* Education section  */}
 
             <Box id="education" sx={{ py: 6, px: { xs: 2, md: 6 }, backgroundColor: '#f9f9f9' }}>
