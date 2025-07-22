@@ -385,31 +385,19 @@ export default function Home() {
                     A selection of my top UI/UX and front-end designs
                 </Typography>
 
-                <Grid container spacing={4} justifyContent={'center'}>
-                    {designs.map((design, index) => (
-                        <Grid item xs={12} sm={6} md={4} key={index}>
-                            <Card
-                                elevation={9}
-                                sx={{
-                                    transition: 'transform 0.3s, box-shadow 0.3s',
-                                    boxShadow: '5px 5px 5px 5px gray',
-                                    '&:hover': {
-                                        transform: 'scale(1.03)',
-                                    },
-                                }}
-                            >
-                                <CardActionArea>
-                                    <CardMedia
-                                        component="img"
-                                        image={design.image}
-                                        alt={design.title}
-                                        height="240"
-                                    />
-
-                                </CardActionArea>
-                            </Card>
-                        </Grid>
-                    ))}
+                <Grid >
+                    <Box display={'flex'} width={'100%'}>
+                        <Box
+                        component = {'img'}
+                        src= {designs[0].image}
+                        height={'500px'}
+                        width={"50%"}
+                        />
+                        <Box border={'2px solid red'} height={'500px'} width = {'50%'}>
+                            <Box border={'2px solid red'} height={'250px'} width = {'50%'}></Box>
+                            <Box border={'2px solid red'} height={'250px'} width = {'50%'}></Box>
+                        </Box>
+                    </Box>
                 </Grid>
             </Box>
         </Box>
