@@ -214,7 +214,7 @@ export default function Home() {
                                 SYED SIBTAIN KAXMI
                             </Typography>
 
-                            <Typography variant="h6" color="white" mt={2} sx={{width:'100%'}}>
+                            <Typography variant="h6" color="white" mt={2} sx={{ width: '100%' }}>
                                 I’m a passionate and detail-driven graphic designer with over 3 years of experience in creating impactful visual designs. Currently, I’m working as a Senior Graphic Designer at Netbots, where I lead branding and visual design projects for various clients across different industries.
                                 <br /><br />
                                 My expertise lies in logo design, brand identity, social media posts, marketing materials, and print design. I believe in blending creativity with clarity to deliver designs that not only look beautiful but also communicate effectively.
@@ -388,14 +388,16 @@ export default function Home() {
                 <Grid >
                     <Box display={'flex'} width={'100%'}>
                         <Box
-                        component = {'img'}
-                        src= {designs[0].image}
-                        height={'500px'}
-                        width={"50%"}
+                            component={'img'}
+                            src={designs[0].image}
+                            height={'500px'}
+                            width={"50%"}
                         />
-                        <Box border={'2px solid red'} height={'500px'} width = {'50%'}>
-                            <Box border={'2px solid red'} height={'250px'} width = {'50%'}></Box>
-                            <Box border={'2px solid red'} height={'250px'} width = {'50%'}></Box>
+                        <Box border={'2px solid red'} height={'500px'} width={'50%'}>
+                            <Box>
+                                <Box border={'2px solid red'} height={'250px'} width={'50%'}></Box>
+                                <Box border={'2px solid red'} height={'250px'} width={'50%'}></Box>
+                            </Box>
                         </Box>
                     </Box>
                 </Grid>
