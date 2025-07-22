@@ -393,10 +393,26 @@ export default function Home() {
                             height={'500px'}
                             width={"50%"}
                         />
-                        <Box border={'2px solid red'} height={'500px'} width={'50%'}>
-                            <Box>
-                                <Box border={'2px solid red'} height={'250px'} width={'50%'}></Box>
-                                <Box border={'2px solid red'} height={'250px'} width={'50%'}></Box>
+                        <Box border={'2px solid red'} height={'500px'} width={'50%'} >
+                            <Box border={'2px solid red'} height={'250px'} width={'100%'} display={'flex'}>
+                                <Box border={'2px solid red'} height={'250px'} width={'50%'}
+                                component={'img'}
+                                src={designs[0].image}
+                                ></Box>
+                                <Box border={'2px solid red'} height={'250px'} width={'50%'}
+                                component={'img'}
+                                src={designs[0].image}
+                                ></Box>
+                            </Box>
+                            <Box border={'2px solid red'} height={'250px'} width={'100%'} display={'flex'}>
+                                <Box border={'2px solid red'} height={'250px'} width={'50%'}
+                                component={'img'}
+                                src={designs[0].image}
+                                ></Box>
+                                <Box border={'2px solid red'} height={'250px'} width={'50%'}
+                                component={'img'}
+                                src={designs[0].image}
+                                ></Box>
                             </Box>
                         </Box>
                     </Box>
