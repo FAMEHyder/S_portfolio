@@ -61,7 +61,7 @@ const Footer = () => {
     <Box
       mt={12}
       sx={{
-        background: "linear-gradient(to right, #0a1d42ff, #130d46ff)",
+        background: "linear-gradient(to right, #08090aff, #070707ff)",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         py: 8,

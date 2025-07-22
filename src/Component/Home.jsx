@@ -1,7 +1,7 @@
 import { Box, Button, Container, Typography, Grid, Card, CardContent, CardMedia, CardActionArea, Paper } from "@mui/material";
 import { motion } from 'framer-motion';
 
-import landscape from '../image/12.jpg';
+import landscape from '../image/SIB.jpg';
 import logo from '../image/logo.png';
 import ProfilePic from '../image/sib.png'
 import landing1 from '../image/12.jpg';
@@ -159,7 +159,7 @@ export default function Home() {
                         content: '""',
                         position: 'absolute',
                         inset: 0,
-                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                        backgroundColor: 'rgba(0, 0, 0, 0.7)',
                         zIndex: -1,
                     },
                 }}
@@ -390,32 +390,32 @@ export default function Home() {
                         <Box
                             component={'img'}
                             src={designs[0].image}
-                            height={'500px'}
+                            height={'494px'}
                             width={"50%"}
                         />
 
                         {/* this is the main box */}
-                        <Box border={'2px solid red'} height={'500px'} width={'50%'} >
+                        <Box  height={'500px'} width={'50%'} >
                             {/* subbox one  */}
-                            <Grid border={'2px solid red'} height={'245px'} width={'95%'} display={'flex'} justifyContent={'space-around'}>
-                                <Box border={'2px solid red'} height={'250px'} width={'50%'}
+                            <Grid  height={'250px'} width={'100%'} display={'flex'} justifyContent={'space-around'}>
+                                <Box height={'244px'} width={'48%'}
                                     component={'img'}
                                     src={designs[0].image}
                                 />
-                                <Box border={'2px solid red'} height={'250px'} width={'50%'}
+                                <Box  height={'244px'} width={'48%'}
                                     component={'img'}
                                     src={designs[0].image}
                                 />
                             </Grid>
 
-                            
+
                             {/* Subbox two  */}
-                            <Grid border={'2px solid red'} height={'245px'} width={'95%'} display={'flex'}>
-                                <Box border={'2px solid red'} height={'250px'} width={'50%'}
+                            <Grid  height={'250px'} width={'100%'} display={'flex'} justifyContent={'space-around'}>
+                                <Box  height={'244px'} width={'48%'}
                                     component={'img'}
                                     src={designs[0].image}
                                 />
-                                <Box border={'2px solid red'} height={'250px'} width={'50%'}
+                                <Box height={'244px'} width={'48%'}
                                     component={'img'}
                                     src={designs[0].image}
                                 />

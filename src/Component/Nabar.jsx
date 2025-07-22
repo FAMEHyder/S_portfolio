@@ -35,7 +35,7 @@ export default function Nabar() {
     <AppBar
       position="fixed"
       sx={{
-        background: 'linear-gradient(90deg, #1e3c72 0%, #98802aff 100%)',
+        background: 'linear-gradient(90deg, #191919 40%, #1e9f29 100%)',
         boxShadow: 3,
         zIndex: 1300,
       }}
