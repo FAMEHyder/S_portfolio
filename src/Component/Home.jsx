@@ -393,27 +393,33 @@ export default function Home() {
                             height={'500px'}
                             width={"50%"}
                         />
+
+                        {/* this is the main box */}
                         <Box border={'2px solid red'} height={'500px'} width={'50%'} >
-                            <Box border={'2px solid red'} height={'250px'} width={'100%'} display={'flex'}>
+                            {/* subbox one  */}
+                            <Grid border={'2px solid red'} height={'245px'} width={'95%'} display={'flex'} justifyContent={'space-around'}>
                                 <Box border={'2px solid red'} height={'250px'} width={'50%'}
-                                component={'img'}
-                                src={designs[0].image}
+                                    component={'img'}
+                                    src={designs[0].image}
                                 />
                                 <Box border={'2px solid red'} height={'250px'} width={'50%'}
-                                component={'img'}
-                                src={designs[0].image}
+                                    component={'img'}
+                                    src={designs[0].image}
                                 />
-                            </Box>
-                            <Box border={'2px solid red'} height={'250px'} width={'100%'} display={'flex'}>
+                            </Grid>
+
+                            
+                            {/* Subbox two  */}
+                            <Grid border={'2px solid red'} height={'245px'} width={'95%'} display={'flex'}>
                                 <Box border={'2px solid red'} height={'250px'} width={'50%'}
-                                component={'img'}
-                                src={designs[0].image}
+                                    component={'img'}
+                                    src={designs[0].image}
                                 />
                                 <Box border={'2px solid red'} height={'250px'} width={'50%'}
-                                component={'img'}
-                                src={designs[0].image}
+                                    component={'img'}
+                                    src={designs[0].image}
                                 />
-                            </Box>
+                            </Grid>
                         </Box>
                     </Box>
                 </Grid>
