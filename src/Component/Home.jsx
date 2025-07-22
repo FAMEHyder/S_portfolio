@@ -423,6 +423,45 @@ export default function Home() {
                         </Box>
                     </Box>
                 </Grid>
+                {/* This is the next grid  */}
+                <Grid >
+                    <Box display={'flex'} width={'100%'}>
+                        <Box
+                            component={'img'}
+                            src={designs[0].image}
+                            height={'494px'}
+                            width={"50%"}
+                        />
+
+                        {/* this is the main box */}
+                        <Box  height={'500px'} width={'50%'} >
+                            {/* subbox one  */}
+                            <Grid  height={'250px'} width={'100%'} display={'flex'} justifyContent={'space-around'}>
+                                <Box height={'244px'} width={'48%'}
+                                    component={'img'}
+                                    src={designs[0].image}
+                                />
+                                <Box  height={'244px'} width={'48%'}
+                                    component={'img'}
+                                    src={designs[0].image}
+                                />
+                            </Grid>
+
+
+                            {/* Subbox two  */}
+                            <Grid  height={'250px'} width={'100%'} display={'flex'} justifyContent={'space-around'}>
+                                <Box  height={'244px'} width={'48%'}
+                                    component={'img'}
+                                    src={designs[0].image}
+                                />
+                                <Box height={'244px'} width={'48%'}
+                                    component={'img'}
+                                    src={designs[0].image}
+                                />
+                            </Grid>
+                        </Box>
+                    </Box>
+                </Grid>
             </Box>
         </Box>
     );
