@@ -425,19 +425,19 @@ export default function Home() {
                 </Grid>
 
                 {/* This is the next grid  */}
-                <Grid >
+                <Grid mt= {10}>
                     <Box display={'flex'} width={'100%'}>
-                        <Box/>
+                        <Typography width={'40%'}>  fugiat aliquam voluptates quod, mollitia maiores! Impedit esse rerum quibusdam nisi. Id perferendis labore non sint nisi minima ut optio eaque voluptate consequatur quas fugit fuga deleniti nemo corporis aut, tempore, magnam unde rerum quibusdam! Quae reiciendis placeat, explicabo ex id assumenda tenetur. Ut labore eius ratione consectetur culpa aliquam. Fuga labore veritatis, architecto placeat eveniet recusandae inventore enim suscipit esse unde illum temporibus consequatur nam exercitationem possimus! Debitis, modi. Nisi similique eum officia! Nobis vero totam possimus veniam voluptatum, enim ab dolore alias! In, error quis veniam sed officia soluta commodi qui beatae dolor delectus ad modi impedit odio similique quod ea corrupti totam nemo dolorum expedita minus consequatur? Aliquam, perspiciatis. Exercitationem aspernatur rem, architecto officiis debitis officia saepe nulla explicabo consectetur iure, facilis hic modi temporibus nemo! </Typography>
 
                         {/* this is the main box */}
-                        <Box  height={'500px'} width={'50%'} >
+                        <Box  height={'500px'} width={'60%'} display={'flex'}>
                             {/* subbox one  */}
-                            <Grid  height={'250px'} width={'100%'} display={'flex'} justifyContent={'space-around'}>
-                                <Box height={'244px'} width={'48%'}
+                            <Grid  height={'100%'} width={'100%'} display={'flex'} flexDirection={'column'} justifyContent={'space-around'}>
+                                <Box height={'244px'} width={'60%'}
                                     component={'img'}
                                     src={designs[0].image}
                                 />
-                                <Box  height={'244px'} width={'48%'}
+                                <Box  height={'244px'} width={'60%'}
                                     component={'img'}
                                     src={designs[0].image}
                                 />
@@ -445,12 +445,8 @@ export default function Home() {
 
 
                             {/* Subbox two  */}
-                            <Grid  height={'250px'} width={'100%'} display={'flex'} justifyContent={'space-around'}>
-                                <Box  height={'244px'} width={'48%'}
-                                    component={'img'}
-                                    src={designs[0].image}
-                                />
-                                <Box height={'244px'} width={'48%'}
+                            <Grid  height={'100%'} width={'100%'} display={'flex'} justifyContent={'space-around'}>
+                                <Box  height={'100%'} width={'100%'}
                                     component={'img'}
                                     src={designs[0].image}
                                 />
