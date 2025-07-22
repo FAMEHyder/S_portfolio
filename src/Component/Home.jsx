@@ -423,15 +423,11 @@ export default function Home() {
                         </Box>
                     </Box>
                 </Grid>
+
                 {/* This is the next grid  */}
                 <Grid >
                     <Box display={'flex'} width={'100%'}>
-                        <Box
-                            component={'img'}
-                            src={designs[0].image}
-                            height={'494px'}
-                            width={"50%"}
-                        />
+                        <Box/>
 
                         {/* this is the main box */}
                         <Box  height={'500px'} width={'50%'} >
