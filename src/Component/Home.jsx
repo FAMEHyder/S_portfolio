@@ -49,6 +49,30 @@ const rotate = {
 };
 
 
+const wiggle = {
+    animate: {
+        rotate: [0, -5, 5, -5, 0],
+        transition: {
+            duration: 1.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+        },
+    },
+};
+
+
+const slideInLoop = {
+    animate: {
+        x: [0, -30, 0],
+        opacity: [1, 0.7, 1],
+        transition: {
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+        },
+    },
+};
+
 export default function Home() {
 
     const skills = [
@@ -392,9 +416,9 @@ export default function Home() {
 
             {/* Education section  */}
 
-            <Box id="education" sx={{ py: 6, px: { xs: 2, md: 6 }, backgroundColor: '#020e4aff' }}>
-                <Typography variant="h4" align="center" gutterBottom fontWeight={700}>
-                    🎓 My Education
+            <Box id="education" sx={{ py: 6, px: { xs: 2, md: 6 }, backgroundColor: '#030303ff', width: '96%', ml: 3, borderRadius: '6px' }}>
+                <Typography variant="h4" align="center" gutterBottom fontWeight={700} color="white">
+                    {<FontAwesomeIcon icon={faGraduationCap} size="1x" color="white" />} My Education
                 </Typography>
                 {/* main grid  */}
                 <Grid height={'300px'} display={'flex'}>
@@ -435,33 +459,61 @@ export default function Home() {
                 </Grid>
 
                 {/* This is the next grid  */}
-                <Grid mt={10} >
-                    <Box display={'flex'} width={'100%'} >
-                        <Typography width={'40%'} >  fugiat aliquam voluptates quod, mollitia maiores! Impedit esse rerum quibusdam nisi. Id perferendis labore non sint nisi minima ut optio eaque voluptate consequatur quas fugit fuga deleniti nemo corporis aut, tempore, magnam unde rerum quibusdam! Quae reiciendis placeat, explicabo ex id assumenda tenetur. Ut labore eius ratione consectetur culpa aliquam. Fuga labore veritatis, architecto placeat eveniet recusandae inventore enim suscipit esse unde illum temporibus consequatur nam exercitationem possimus! Debitis, modi. Nisi similique eum officia! Nobis vero totam possimus veniam voluptatum, enim ab dolore alias! In, error quis veniam sed officia soluta commodi qui beatae dolor delectus ad modi impedit odio similique quod ea corrupti totam nemo dolorum expedita minus consequatur? Aliquam, perspiciatis. Exercitationem aspernatur rem, architecto officiis debitis officia saepe nulla explicabo consectetur iure, facilis hic modi temporibus nemo! </Typography>
+                <Grid mt={10}>
+                    <Box display="flex" width="100%">
 
-                        {/* this is the main box */}
-                        <Box height={'500px'} width={'60%'} display={'flex'} >
-                            {/* subbox one  */}
-                            <Grid height={'100%'} width={'60%'} display={'flex'} flexDirection={'column'} justifyContent={'space-around'} >
-                                <Box height={'49%'} width={'98%'}
-                                    component={'img'}
-                                    src={designs[0].image}
-                                />
-                                <Box height={'49%'} width={'98%'}
-                                    component={'img'}
-                                    src={designs[0].image}
-                                />
-                            </Grid>
+                        {/* Text Section with animation */}
+                        <motion.div style={{ width: '40%' }} {...slideInLoop}>
+                            <Typography>
+                                fugiat aliquam voluptates quod, mollitia maiores! Impedit esse rerum quibusdam nisi.
+                                Id perferendis labore non sint nisi minima ut optio eaque voluptate consequatur quas
+                                fugit fuga deleniti nemo corporis aut, tempore, magnam unde rerum quibusdam! Quae
+                                reiciendis placeat, explicabo ex id assumenda tenetur. Ut labore eius ratione
+                                consectetur culpa aliquam. Fuga labore veritatis, architecto placeat eveniet recusandae
+                                inventore enim suscipit esse unde illum temporibus consequatur nam exercitationem
+                                possimus! Debitis, modi. Nisi similique eum officia! Nobis vero totam possimus veniam
+                                voluptatum, enim ab dolore alias! In, error quis veniam sed officia soluta commodi qui
+                                beatae dolor delectus ad modi impedit odio similique quod ea corrupti totam nemo
+                                dolorum expedita minus consequatur? Aliquam, perspiciatis. Exercitationem aspernatur
+                                rem, architecto officiis debitis officia saepe nulla explicabo consectetur iure, facilis
+                                hic modi temporibus nemo!
+                            </Typography>
+                        </motion.div>
 
+                        {/* Image Section with animation */}
+                        <motion.div style={{ width: '60%' }} {...slideInLoop}>
+                            <Box height="500px" width="100%" display="flex">
 
-                            {/* Subbox two  */}
-                            <Grid height={'100%'} width={'100%'} display={'flex'} justifyContent={'space-around'}>
-                                <Box height={'100%'} width={'100%'}
-                                    component={'img'}
-                                    src={designs[0].image}
-                                />
-                            </Grid>
-                        </Box>
+                                {/* Subbox one */}
+                                <Grid height="100%" width="60%" display="flex" flexDirection="column" justifyContent="space-around">
+                                    <Box
+                                        height="49%"
+                                        width="98%"
+                                        component="img"
+                                        src={designs[0].image}
+                                        sx={{ objectFit: 'cover', borderRadius: 2 }}
+                                    />
+                                    <Box
+                                        height="49%"
+                                        width="98%"
+                                        component="img"
+                                        src={designs[0].image}
+                                        sx={{ objectFit: 'cover', borderRadius: 2 }}
+                                    />
+                                </Grid>
+
+                                {/* Subbox two */}
+                                <Grid height="100%" width="100%" display="flex" justifyContent="space-around">
+                                    <Box
+                                        height="100%"
+                                        width="100%"
+                                        component="img"
+                                        src={designs[0].image}
+                                        sx={{ objectFit: 'cover', borderRadius: 2 }}
+                                    />
+                                </Grid>
+                            </Box>
+                        </motion.div>
                     </Box>
                 </Grid>
             </Box>
