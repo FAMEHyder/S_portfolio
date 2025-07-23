@@ -23,9 +23,9 @@ export default function Nabar() {
       position="fixed"
       elevation={2}
       sx={{
-        background: 'linear-gradient(90deg, #0f0c29, #302b63, #24243e)',
-        zIndex: 1300,
-      }}
+    background: 'linear-gradient(90deg, #020e4aff)',
+    zIndex: 1300,
+  }}
 
     >
       <Container maxWidth="lg">

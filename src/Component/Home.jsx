@@ -356,7 +356,7 @@ export default function Home() {
                         <Box width={'100%'} height={'100px'}> {<FontAwesomeIcon icon={faGraduationCap} size="2x" color="white" />} <Typography color={'white'} sx={{ ml: '40px' }}> <strong>Metriculation</strong> <br />City public school skardu <br /> 2019-2021</Typography></Box>
                     </Grid>
 
-                    <Grid border={'2px solid red'} width={'50%'}
+                    <Grid  width={'50%'}
                         component={'img'}
                         src={pogo}
                     ></Grid>
@@ -378,36 +378,11 @@ export default function Home() {
                             component={'img'}
                             src={designs[0].image}
                             height={'494px'}
-                            width={"50%"}
+                            width={"100%"}
                         />
 
                         {/* this is the main box */}
-                        <Box height={'500px'} width={'50%'} >
-                            {/* subbox one  */}
-                            <Grid height={'250px'} width={'100%'} display={'flex'} justifyContent={'space-around'}>
-                                <Box height={'244px'} width={'48%'}
-                                    component={'img'}
-                                    src={designs[0].image}
-                                />
-                                <Box height={'244px'} width={'48%'}
-                                    component={'img'}
-                                    src={designs[0].image}
-                                />
-                            </Grid>
-
-
-                            {/* Subbox two  */}
-                            <Grid height={'250px'} width={'100%'} display={'flex'} justifyContent={'space-around'}>
-                                <Box height={'244px'} width={'48%'}
-                                    component={'img'}
-                                    src={designs[0].image}
-                                />
-                                <Box height={'244px'} width={'48%'}
-                                    component={'img'}
-                                    src={designs[0].image}
-                                />
-                            </Grid>
-                        </Box>
+                        
                     </Box>
                 </Grid>
 
