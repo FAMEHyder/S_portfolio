@@ -5,75 +5,74 @@ import {
   Toolbar,
   IconButton,
   Typography,
-  Menu,
   Container,
   Avatar,
-  Button,
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import MenuIcon from '@mui/icons-material/Menu';
-import profile from '../image/00000.png'; // Update with your actual image path
+import profile from '../image/00000.png'; // Make sure this path is valid
 
 export default function Nabar() {
-  const [anchorElNav, setAnchorElNav] = useState(null);
   const navigate = useNavigate();
 
-  const handleclick = (path) => {
+  const handleClick = (path) => {
     navigate(path);
   };
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-  
 
   return (
     <AppBar
       position="fixed"
+      elevation={2}
       sx={{
-        background: 'linear-gradient(90deg, #545fc4 40%)',
-        boxShadow: 3,
-        zIndex: 1300,
-      }}
+    background: 'linear-gradient(90deg, #0f2027, #203a43, #f2b632)',
+    zIndex: 1300,
+  }}
     >
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-
-          {/* Avatar on the left — routes to home */}
-          <Box sx={{ flexGrow: 1, mr: 2 }}>
-            <IconButton onClick={() => navigate('/')} sx={{ p: 0 }}>
-              <Avatar alt="Siptain Kazmi" src={profile} sx={{ boxShadow: 2 }} />
+      <Container maxWidth="lg">
+        <Toolbar
+          disableGutters
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            px: { xs: 1, sm: 2 },
+          }}
+        >
+          {/* Avatar */}
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <IconButton onClick={() => handleClick('/')} sx={{ p: 0 }}>
+              <Avatar
+                alt="Sibtain Kazmi"
+                src={profile}
+                sx={{
+                  width: 44,
+                  height: 44,
+                  transition: 'transform 0.3s',
+                  '&:hover': {
+                    transform: 'scale(1.05)',
+                  },
+                }}
+              />
             </IconButton>
           </Box>
 
-      
-
-          {/* SIPTAIN Logo — aligned right */}
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              
-              onClick={() => handleclick('./')}
-              
-              sx={{
-                ml: 2,
-                fontFamily: 'monospace',
-                fontWeight: 700,
-                letterSpacing: '.2rem',
-                color: 'inherit',
-                textDecoration: 'none',
-                cursor: 'pointer'
-              }}
-            >
-              SIBTAIN
-            </Typography>
-          </Box>
+          {/* Brand name */}
+          <Typography
+            variant="h6"
+            onClick={() => handleClick('/')}
+            sx={{
+              fontWeight: 600,
+              fontSize: { xs: '1.1rem', sm: '1.25rem' },
+              fontFamily: 'Poppins, sans-serif',
+              letterSpacing: '1px',
+              color: '#ffffff',
+              cursor: 'pointer',
+              transition: 'color 0.3s',
+              '&:hover': {
+                color: '#ffd580',
+              },
+            }}
+          >
+            SIBTAIN
+          </Typography>
         </Toolbar>
       </Container>
     </AppBar>
