@@ -14,7 +14,7 @@ import blog from '../image/12.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 
- 
+
 
 
 
@@ -152,94 +152,94 @@ export default function Home() {
     return (
         <Box>
             <Box
-    sx={{
-      display: 'flex',
-      flexDirection: { xs: 'column', md: 'row' },
-      alignItems: 'center',
-      justifyContent: 'space-between',
-      textAlign: { xs: 'center', md: 'left' },
-      px: 2,
-      py: 4,
-    }}
-    gap={4}
-  >
-    {/* Left Side: Text Content */}
-    <Box sx={{ flex: 1 }}>
-      <Typography
-        variant="h3"
-        fontWeight="bold"
-        sx={{
-          background: "linear-gradient(to right, #E0E0E0, #1e3c72, #FAFAFA, #dca138, #E0E0E0)",
-          backgroundSize: "200% auto",
-          fontWeight: 800,
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-          animation: "gradient 6s linear infinite",
-          "@keyframes gradient": {
-            "0%": { backgroundPosition: "0% center" },
-            "100%": { backgroundPosition: "200% center" },
-          },
-        }}
-      >
-        SYED SIBTAIN KAXMI
-      </Typography>
+                sx={{
+                    display: 'flex',
+                    flexDirection: { xs: 'column', md: 'row' },
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    textAlign: { xs: 'center', md: 'left' },
+                    px: 2,
+                    py: 4,
+                }}
+                gap={4}
+            >
+                {/* Left Side: Text Content */}
+                <Box sx={{ flex: 1 }}>
+                    <Typography
+                        variant="h3"
+                        fontWeight="bold"
+                        sx={{
+                            background: "linear-gradient(to right, #E0E0E0, #1e3c72, #FAFAFA, #dca138, #E0E0E0)",
+                            backgroundSize: "200% auto",
+                            fontWeight: 800,
+                            WebkitBackgroundClip: "text",
+                            WebkitTextFillColor: "transparent",
+                            animation: "gradient 6s linear infinite",
+                            "@keyframes gradient": {
+                                "0%": { backgroundPosition: "0% center" },
+                                "100%": { backgroundPosition: "200% center" },
+                            },
+                        }}
+                    >
+                        SYED SIBTAIN KAXMI
+                    </Typography>
 
-      <Typography variant="h6" color="white" mt={2}>
-        I’m a passionate and detail-driven graphic designer with over 3 years of experience in creating impactful visual designs. Currently, I’m working as a Senior Graphic Designer at Netbots, where I lead branding and visual design projects for various clients across different industries.
-        <br /><br />
-        My expertise lies in logo design, brand identity, social media posts, marketing materials, and print design. I believe in blending creativity with clarity to deliver designs that not only look beautiful but also communicate effectively.
-        <br /><br />
-        I’ve worked with startups, businesses, and organizations to craft visuals that build trust and leave lasting impressions.
-      </Typography>
+                    <Typography variant="h6" color="white" mt={2}>
+                        I’m a passionate and detail-driven graphic designer with over 3 years of experience in creating impactful visual designs. Currently, I’m working as a Senior Graphic Designer at Netbots, where I lead branding and visual design projects for various clients across different industries.
+                        <br /><br />
+                        My expertise lies in logo design, brand identity, social media posts, marketing materials, and print design. I believe in blending creativity with clarity to deliver designs that not only look beautiful but also communicate effectively.
+                        <br /><br />
+                        I’ve worked with startups, businesses, and organizations to craft visuals that build trust and leave lasting impressions.
+                    </Typography>
 
-      <Box mt={3} display="flex" gap={2} flexWrap="wrap">
-        <Button
-          variant="contained"
-          color="primary"
-          size="large"
-          sx={{ px: 4, textTransform: "none" }}
-        >
-          Build your Design →
-        </Button>
-        <Button
-          variant="outlined"
-          size="large"
-          href="https://wa.me/923407620765"
-          target="_blank"
-          rel="noopener noreferrer"
-          sx={{
-            px: 4,
-            textTransform: "none",
-            borderColor: "grey.700",
-            color: "grey.300",
-            "&:hover": {
-              borderColor: "grey.500",
-              backgroundColor: "rgba(255, 255, 255, 0.04)",
-            },
-          }}
-        >
-          WhatsApp
-        </Button>
-      </Box>
-    </Box>
+                    <Box mt={3} display="flex" gap={2} flexWrap="wrap">
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            size="large"
+                            sx={{ px: 4, textTransform: "none" }}
+                        >
+                            Build your Design →
+                        </Button>
+                        <Button
+                            variant="outlined"
+                            size="large"
+                            href="https://wa.me/923407620765"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            sx={{
+                                px: 4,
+                                textTransform: "none",
+                                borderColor: "grey.700",
+                                color: "grey.300",
+                                "&:hover": {
+                                    borderColor: "grey.500",
+                                    backgroundColor: "rgba(255, 255, 255, 0.04)",
+                                },
+                            }}
+                        >
+                            WhatsApp
+                        </Button>
+                    </Box>
+                </Box>
 
-    {/* Right Side: Profile Image */}
-    <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
-      <Box
-        component="img"
-        src={ProfilePic}
-        alt="Profile"
-        sx={{
-          width: '50vh',
-          height: '50vh',
-          borderRadius: '50%',
-          border: '6px solid white',
-          boxShadow: 4,
-          objectFit: 'contain',
-        }}
-      />
-    </Box>
-  </Box>
+                {/* Right Side: Profile Image */}
+                <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+                    <Box
+                        component="img"
+                        src={ProfilePic}
+                        alt="Profile"
+                        sx={{
+                            width: '50vh',
+                            height: '50vh',
+                            borderRadius: '50%',
+                            border: '6px solid white',
+                            boxShadow: 4,
+                            objectFit: 'contain',
+                        }}
+                    />
+                </Box>
+            </Box>
 
 
 
@@ -251,7 +251,7 @@ export default function Home() {
                     p: 4,
                     color: 'white',
                     boxShadow: 4,
-                    bgcolor:'#eaeaea'
+                    bgcolor: '#eaeaea'
                 }}
             >
                 <Typography variant="h4" fontWeight="bold" gutterBottom textAlign="center" color="#545fc4" fontFamily={'poppin-bold'}>
@@ -295,8 +295,8 @@ export default function Home() {
                 </Typography>
                 <Grid container spacing={4} >
                     {experiences.map((exp, index) => (
-                        <Grid item xs={12} md={6} key={index} sx={{ p: 3, borderRadius: 2, height: '100%' , width:'100%'}}>
-                            <Paper elevation={2} sx={{ p: 3, borderRadius: 2, height: '100%' , width:'100%', background: 'linear-gradient(90deg, #545fc4 , #120343ff)',color:'white'}}>
+                        <Grid item xs={12} md={6} key={index} sx={{ p: 3, borderRadius: 2, height: '100%', width: '100%' }}>
+                            <Paper elevation={2} sx={{ p: 3, borderRadius: 2, height: '100%', width: '100%', background: 'linear-gradient(90deg, #545fc4 , #120343ff)', color: 'white' }}>
                                 <Typography variant="h6" fontWeight="bold">
                                     {exp.role}
                                 </Typography>
@@ -324,16 +324,16 @@ export default function Home() {
                     🎓 My Education
                 </Typography>
                 {/* main grid  */}
-                <Grid height={'300px'}  display={'flex'}>
-                    <Grid  width={'50%'} display={'flex'} flexDirection={'column'}>
-                        <Box  width={'100%'} height={'100px'}  > {<FontAwesomeIcon icon={faGraduationCap} size="2x" color="white"/>} <Typography  color = {'white'} sx={{ml:'40px'}}> <strong>Becholar of Science</strong> <br />Boys Degrre College Skardu <br /> 2023-present</Typography></Box>
-                        <Box  width={'100%'} height={'100px'}> {<FontAwesomeIcon icon={faGraduationCap} size="2x" color="white"/>} <Typography  color = {'white'} sx={{ml:'40px'}}> <strong>FA </strong> <br />Boys Degrre College Skardu <br /> 2021-2023</Typography></Box>
-                        <Box  width={'100%'} height={'100px'}> {<FontAwesomeIcon icon={faGraduationCap} size="2x" color="white"/>} <Typography  color = {'white'} sx={{ml:'40px'}}> <strong>Metriculation</strong> <br />City public school skardu <br /> 2019-2021</Typography></Box>
+                <Grid height={'300px'} display={'flex'}>
+                    <Grid width={'50%'} display={'flex'} flexDirection={'column'}>
+                        <Box width={'100%'} height={'100px'}  > {<FontAwesomeIcon icon={faGraduationCap} size="2x" color="white" />} <Typography color={'white'} sx={{ ml: '40px' }}> <strong>Becholar of Science</strong> <br />Boys Degrre College Skardu <br /> 2023-present</Typography></Box>
+                        <Box width={'100%'} height={'100px'}> {<FontAwesomeIcon icon={faGraduationCap} size="2x" color="white" />} <Typography color={'white'} sx={{ ml: '40px' }}> <strong>FA </strong> <br />Boys Degrre College Skardu <br /> 2021-2023</Typography></Box>
+                        <Box width={'100%'} height={'100px'}> {<FontAwesomeIcon icon={faGraduationCap} size="2x" color="white" />} <Typography color={'white'} sx={{ ml: '40px' }}> <strong>Metriculation</strong> <br />City public school skardu <br /> 2019-2021</Typography></Box>
                     </Grid>
 
                     <Grid border={'2px solid red'} width={'50%'}
-                    component={'img'}
-                    src={pogo}
+                        component={'img'}
+                        src={pogo}
                     ></Grid>
                 </Grid>
             </Box>
@@ -357,14 +357,14 @@ export default function Home() {
                         />
 
                         {/* this is the main box */}
-                        <Box  height={'500px'} width={'50%'} >
+                        <Box height={'500px'} width={'50%'} >
                             {/* subbox one  */}
-                            <Grid  height={'250px'} width={'100%'} display={'flex'} justifyContent={'space-around'}>
+                            <Grid height={'250px'} width={'100%'} display={'flex'} justifyContent={'space-around'}>
                                 <Box height={'244px'} width={'48%'}
                                     component={'img'}
                                     src={designs[0].image}
                                 />
-                                <Box  height={'244px'} width={'48%'}
+                                <Box height={'244px'} width={'48%'}
                                     component={'img'}
                                     src={designs[0].image}
                                 />
@@ -372,8 +372,8 @@ export default function Home() {
 
 
                             {/* Subbox two  */}
-                            <Grid  height={'250px'} width={'100%'} display={'flex'} justifyContent={'space-around'}>
-                                <Box  height={'244px'} width={'48%'}
+                            <Grid height={'250px'} width={'100%'} display={'flex'} justifyContent={'space-around'}>
+                                <Box height={'244px'} width={'48%'}
                                     component={'img'}
                                     src={designs[0].image}
                                 />
@@ -387,19 +387,19 @@ export default function Home() {
                 </Grid>
 
                 {/* This is the next grid  */}
-                <Grid mt= {10} >
+                <Grid mt={10} >
                     <Box display={'flex'} width={'100%'} >
                         <Typography width={'40%'} >  fugiat aliquam voluptates quod, mollitia maiores! Impedit esse rerum quibusdam nisi. Id perferendis labore non sint nisi minima ut optio eaque voluptate consequatur quas fugit fuga deleniti nemo corporis aut, tempore, magnam unde rerum quibusdam! Quae reiciendis placeat, explicabo ex id assumenda tenetur. Ut labore eius ratione consectetur culpa aliquam. Fuga labore veritatis, architecto placeat eveniet recusandae inventore enim suscipit esse unde illum temporibus consequatur nam exercitationem possimus! Debitis, modi. Nisi similique eum officia! Nobis vero totam possimus veniam voluptatum, enim ab dolore alias! In, error quis veniam sed officia soluta commodi qui beatae dolor delectus ad modi impedit odio similique quod ea corrupti totam nemo dolorum expedita minus consequatur? Aliquam, perspiciatis. Exercitationem aspernatur rem, architecto officiis debitis officia saepe nulla explicabo consectetur iure, facilis hic modi temporibus nemo! </Typography>
 
                         {/* this is the main box */}
-                        <Box  height={'500px'} width={'60%'} display={'flex'} >
+                        <Box height={'500px'} width={'60%'} display={'flex'} >
                             {/* subbox one  */}
-                            <Grid  height={'100%'} width={'60%'} display={'flex'} flexDirection={'column'} justifyContent={'space-around'} >
+                            <Grid height={'100%'} width={'60%'} display={'flex'} flexDirection={'column'} justifyContent={'space-around'} >
                                 <Box height={'49%'} width={'98%'}
                                     component={'img'}
                                     src={designs[0].image}
                                 />
-                                <Box  height={'49%'} width={'98%'}
+                                <Box height={'49%'} width={'98%'}
                                     component={'img'}
                                     src={designs[0].image}
                                 />
@@ -407,8 +407,8 @@ export default function Home() {
 
 
                             {/* Subbox two  */}
-                            <Grid  height={'100%'} width={'100%'} display={'flex'} justifyContent={'space-around'}>
-                                <Box  height={'100%'} width={'100%'}
+                            <Grid height={'100%'} width={'100%'} display={'flex'} justifyContent={'space-around'}>
+                                <Box height={'100%'} width={'100%'}
                                     component={'img'}
                                     src={designs[0].image}
                                 />
