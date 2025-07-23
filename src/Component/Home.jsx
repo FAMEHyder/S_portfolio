@@ -1,5 +1,6 @@
 import { Box, Button, Container, Typography, Grid, Card, CardContent, CardMedia, CardActionArea, Paper } from "@mui/material";
 import { motion } from 'framer-motion';
+import pogo from '../image/77.png'
 
 import landscape from '../image/SIB.jpg';
 import logo from '../image/logo.png';
@@ -267,15 +268,15 @@ export default function Home() {
                 sx={{
 
                     p: 4,
-                    background: 'linear-gradient(to bottom, #121646ff, #131951ff, #141b5fff, #15233aff)',
                     color: 'white',
                     boxShadow: 4,
+                    bgcolor:'#eaeaea'
                 }}
             >
-                <Typography variant="h4" fontWeight="bold" gutterBottom textAlign="center">
+                <Typography variant="h4" fontWeight="bold" gutterBottom textAlign="center" color="#545fc4" fontFamily={'poppin-bold'}>
                     My Design Skills
                 </Typography>
-                <Typography variant="body1" sx={{ mb: 4 }} textAlign="center">
+                <Typography variant="body1" sx={{ mb: 4 }} textAlign="center" color="#545fc4">
                     Crafting creative visuals from concept to completion.
                 </Typography>
 
@@ -337,42 +338,22 @@ export default function Home() {
 
             {/* Education section  */}
 
-            <Box id="education" sx={{ py: 6, px: { xs: 2, md: 6 }, backgroundColor: '#dca138' }}>
+            <Box id="education" sx={{ py: 6, px: { xs: 2, md: 6 }, backgroundColor: '#32886f' }}>
                 <Typography variant="h4" align="center" gutterBottom fontWeight={700}>
                     🎓 My Education
                 </Typography>
-                <Grid container spacing={4} justifyContent="center">
-                    {educationData.map((edu, i) => (
-                        <Grid item xs={12} sm={6} md={4} key={i}>
-                            <motion.div
-                                custom={i}
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: true }}
-                                variants={cardVariants}
-                            >
-                                <Card elevation={4} sx={{ borderRadius: 4 }}>
-                                    <CardMedia
-                                        component="img"
-                                        height="180"
-                                        image={edu.image}
-                                        alt={edu.title}
-                                    />
-                                    <CardContent>
-                                        <Typography variant="h6" fontWeight="bold">
-                                            {edu.title}
-                                        </Typography>
-                                        <Typography variant="subtitle1" color="text.secondary">
-                                            {edu.school}
-                                        </Typography>
-                                        <Typography variant="caption" display="block" mt={1}>
-                                            {edu.year}
-                                        </Typography>
-                                    </CardContent>
-                                </Card>
-                            </motion.div>
-                        </Grid>
-                    ))}
+                {/* main grid  */}
+                <Grid height={'300px'}  display={'flex'}>
+                    <Grid border={'2px solid red'} width={'50%'} display={'flex'} flexDirection={'column'}>
+                        <Box border={'2px solid black'} width={'100%'} height={'100px'}></Box>
+                        <Box border={'2px solid black'} width={'100%'} height={'100px'}></Box>
+                        <Box border={'2px solid black'} width={'100%'} height={'100px'}></Box>
+                    </Grid>
+
+                    <Grid border={'2px solid red'} width={'50%'}
+                    component={'img'}
+                    src={pogo}
+                    ></Grid>
                 </Grid>
             </Box>
 
@@ -425,19 +406,19 @@ export default function Home() {
                 </Grid>
 
                 {/* This is the next grid  */}
-                <Grid mt= {10}>
-                    <Box display={'flex'} width={'100%'}>
-                        <Typography width={'40%'}>  fugiat aliquam voluptates quod, mollitia maiores! Impedit esse rerum quibusdam nisi. Id perferendis labore non sint nisi minima ut optio eaque voluptate consequatur quas fugit fuga deleniti nemo corporis aut, tempore, magnam unde rerum quibusdam! Quae reiciendis placeat, explicabo ex id assumenda tenetur. Ut labore eius ratione consectetur culpa aliquam. Fuga labore veritatis, architecto placeat eveniet recusandae inventore enim suscipit esse unde illum temporibus consequatur nam exercitationem possimus! Debitis, modi. Nisi similique eum officia! Nobis vero totam possimus veniam voluptatum, enim ab dolore alias! In, error quis veniam sed officia soluta commodi qui beatae dolor delectus ad modi impedit odio similique quod ea corrupti totam nemo dolorum expedita minus consequatur? Aliquam, perspiciatis. Exercitationem aspernatur rem, architecto officiis debitis officia saepe nulla explicabo consectetur iure, facilis hic modi temporibus nemo! </Typography>
+                <Grid mt= {10} >
+                    <Box display={'flex'} width={'100%'} >
+                        <Typography width={'40%'} >  fugiat aliquam voluptates quod, mollitia maiores! Impedit esse rerum quibusdam nisi. Id perferendis labore non sint nisi minima ut optio eaque voluptate consequatur quas fugit fuga deleniti nemo corporis aut, tempore, magnam unde rerum quibusdam! Quae reiciendis placeat, explicabo ex id assumenda tenetur. Ut labore eius ratione consectetur culpa aliquam. Fuga labore veritatis, architecto placeat eveniet recusandae inventore enim suscipit esse unde illum temporibus consequatur nam exercitationem possimus! Debitis, modi. Nisi similique eum officia! Nobis vero totam possimus veniam voluptatum, enim ab dolore alias! In, error quis veniam sed officia soluta commodi qui beatae dolor delectus ad modi impedit odio similique quod ea corrupti totam nemo dolorum expedita minus consequatur? Aliquam, perspiciatis. Exercitationem aspernatur rem, architecto officiis debitis officia saepe nulla explicabo consectetur iure, facilis hic modi temporibus nemo! </Typography>
 
                         {/* this is the main box */}
-                        <Box  height={'500px'} width={'60%'} display={'flex'}>
+                        <Box  height={'500px'} width={'60%'} display={'flex'} >
                             {/* subbox one  */}
-                            <Grid  height={'100%'} width={'100%'} display={'flex'} flexDirection={'column'} justifyContent={'space-around'}>
-                                <Box height={'244px'} width={'60%'}
+                            <Grid  height={'100%'} width={'60%'} display={'flex'} flexDirection={'column'} justifyContent={'space-around'} >
+                                <Box height={'49%'} width={'98%'}
                                     component={'img'}
                                     src={designs[0].image}
                                 />
-                                <Box  height={'244px'} width={'60%'}
+                                <Box  height={'49%'} width={'98%'}
                                     component={'img'}
                                     src={designs[0].image}
                                 />
