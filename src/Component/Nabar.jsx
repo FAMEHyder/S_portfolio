@@ -23,9 +23,10 @@ export default function Nabar() {
       position="fixed"
       elevation={2}
       sx={{
-    background: 'linear-gradient(90deg, #0f2027, #203a43, #f2b632)',
-    zIndex: 1300,
-  }}
+        background: 'linear-gradient(90deg, #0f0c29, #302b63, #24243e)',
+        zIndex: 1300,
+      }}
+
     >
       <Container maxWidth="lg">
         <Toolbar

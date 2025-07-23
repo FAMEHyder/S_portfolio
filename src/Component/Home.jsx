@@ -1,6 +1,6 @@
 import { Box, Button, Container, Typography, Grid, Card, CardContent, CardMedia, CardActionArea, Paper } from "@mui/material";
 import { motion } from 'framer-motion';
-import pogo from '../image/77.png'
+import pogo from '../image/qq.png'
 
 import landscape from '../image/SIB.jpg';
 import logo from '../image/logo.png';
@@ -209,8 +209,7 @@ export default function Home() {
                                     I’m a passionate and detail-driven graphic designer with over 3 years of experience in creating impactful visual designs. Currently, I’m working as a Senior Graphic Designer at Netbots, where I lead branding and visual design projects for various clients across different industries.
                                     <br /><br />
                                     My expertise lies in logo design, brand identity, social media posts, marketing materials, and print design. I believe in blending creativity with clarity to deliver designs that not only look beautiful but also communicate effectively.
-                                    <br /><br />\
-                                    I’ve worked with startups, businesses, and organizations to craft visuals that build trust and leave lasting impressions.
+                                    
                                 </Typography>
                             </Box>
 
@@ -253,9 +252,9 @@ export default function Home() {
                                 src={ProfilePic}
                                 alt="Profile"
                                 sx={{
-                                    width: '50vh',
-                                    height: '50vh',
-                                    borderRadius: '50%',
+                                    width: '70vh',
+                                    height: '70vh',
+                                    borderRadius: '20%',
                                     border: '6px solid white',
                                     boxShadow: 4,
                                     objectFit: 'contained',
