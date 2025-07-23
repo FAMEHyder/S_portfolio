@@ -11,6 +11,12 @@ import portfolio from '../image/12.jpg';
 import mobileapp from '../image/12.jpg';
 import dashboard from '../image/12.jpg';
 import blog from '../image/12.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
+
+ 
+
+
 
 export default function Home() {
 
@@ -113,7 +119,7 @@ export default function Home() {
         {
             role: 'Graphic Designer',
             company: 'Netbots Pvt. Ltd.',
-            duration: 'Feb 2022 – Present',
+            duration: 'Dec 2023 – Present',
             highlights: [
                 'Led design and branding for Netbots and its clients across software, hospitality, and education industries.',
                 'Created compelling visuals including logos, social media posts, posters, and marketing content.',
@@ -124,7 +130,7 @@ export default function Home() {
         {
             role: 'Graphic Designer (Contract)',
             company: 'Rinor',
-            duration: '2023',
+            duration: '2022-2023',
             highlights: [
                 'Designed professional product mockups, packaging, and promotional materials.',
                 'Delivered design assets tailored to Rinor’s branding and marketing needs.',
@@ -134,7 +140,7 @@ export default function Home() {
         {
             role: 'Freelance Graphic Designer',
             company: 'Remote / Multiple Clients',
-            duration: '2020 – Present',
+            duration: '2022 – Present',
             highlights: [
                 'Collaborated with local and international clients on logo design, social media graphics, and branding.',
                 'Provided creative direction and complete visual solutions for startups and small businesses.',
@@ -312,14 +318,14 @@ export default function Home() {
                 <Typography variant="h4" fontWeight="bold" gutterBottom>
                     Graphic Design Experience
                 </Typography>
-                <Grid container spacing={4}>
+                <Grid container spacing={4} >
                     {experiences.map((exp, index) => (
-                        <Grid item xs={12} md={6} key={index}>
-                            <Paper elevation={2} sx={{ p: 3, borderRadius: 2, height: '100%' }}>
+                        <Grid item xs={12} md={6} key={index} sx={{ p: 3, borderRadius: 2, height: '100%' , width:'100%'}}>
+                            <Paper elevation={2} sx={{ p: 3, borderRadius: 2, height: '100%' , width:'100%', bgcolor:"#545fc4",color:'white'}}>
                                 <Typography variant="h6" fontWeight="bold">
                                     {exp.role}
                                 </Typography>
-                                <Typography variant="subtitle1" color="text.secondary">
+                                <Typography variant="subtitle1" color="white">
                                     {exp.company} | {exp.duration}
                                 </Typography>
                                 <ul style={{ marginTop: 10 }}>
@@ -338,16 +344,16 @@ export default function Home() {
 
             {/* Education section  */}
 
-            <Box id="education" sx={{ py: 6, px: { xs: 2, md: 6 }, backgroundColor: '#32886f' }}>
+            <Box id="education" sx={{ py: 6, px: { xs: 2, md: 6 }, backgroundColor: '#545fc4' }}>
                 <Typography variant="h4" align="center" gutterBottom fontWeight={700}>
                     🎓 My Education
                 </Typography>
                 {/* main grid  */}
                 <Grid height={'300px'}  display={'flex'}>
-                    <Grid border={'2px solid red'} width={'50%'} display={'flex'} flexDirection={'column'}>
-                        <Box border={'2px solid black'} width={'100%'} height={'100px'}></Box>
-                        <Box border={'2px solid black'} width={'100%'} height={'100px'}></Box>
-                        <Box border={'2px solid black'} width={'100%'} height={'100px'}></Box>
+                    <Grid  width={'50%'} display={'flex'} flexDirection={'column'}>
+                        <Box  width={'100%'} height={'100px'}  > {<FontAwesomeIcon icon={faGraduationCap} size="2x" color="white"/>} <Typography  color = {'white'} sx={{ml:'40px'}}> <strong>Becholar of Science</strong> <br />Boys Degrre College Skardu <br /> 2023-present</Typography></Box>
+                        <Box  width={'100%'} height={'100px'}> {<FontAwesomeIcon icon={faGraduationCap} size="2x" color="white"/>} <Typography  color = {'white'} sx={{ml:'40px'}}> <strong>FA </strong> <br />Boys Degrre College Skardu <br /> 2021-2023</Typography></Box>
+                        <Box  width={'100%'} height={'100px'}> {<FontAwesomeIcon icon={faGraduationCap} size="2x" color="white"/>} <Typography  color = {'white'} sx={{ml:'40px'}}> <strong>Metriculation</strong> <br />City public school skardu <br /> 2019-2021</Typography></Box>
                     </Grid>
 
                     <Grid border={'2px solid red'} width={'50%'}
