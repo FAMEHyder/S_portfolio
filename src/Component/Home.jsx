@@ -15,7 +15,38 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 
 
+const float = {
+    animate: {
+        y: [0, -10, 0],
+        transition: {
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+        },
+    },
+};
 
+const pulse = {
+    animate: {
+        scale: [1, 1.05, 1],
+        transition: {
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut",
+        },
+    },
+};
+
+const rotate = {
+    animate: {
+        rotate: [0, 360],
+        transition: {
+            duration: 10,
+            repeat: Infinity,
+            ease: "linear",
+        },
+    },
+};
 
 
 export default function Home() {
@@ -209,7 +240,7 @@ export default function Home() {
                                     I’m a passionate and detail-driven graphic designer with over 3 years of experience in creating impactful visual designs. Currently, I’m working as a Senior Graphic Designer at Netbots, where I lead branding and visual design projects for various clients across different industries.
                                     <br /><br />
                                     My expertise lies in logo design, brand identity, social media posts, marketing materials, and print design. I believe in blending creativity with clarity to deliver designs that not only look beautiful but also communicate effectively.
-                                    
+
                                 </Typography>
                             </Box>
 
@@ -246,20 +277,23 @@ export default function Home() {
                         </Box>
 
                         {/* Right Side: Profile Image */}
+
                         <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
-                            <Box
-                                component="img"
-                                src={ProfilePic}
-                                alt="Profile"
-                                sx={{
-                                    width: '70vh',
-                                    height: '70vh',
-                                    borderRadius: '20%',
-                                    border: '6px solid white',
-                                    boxShadow: 4,
-                                    objectFit: 'contained',
-                                }}
-                            />
+                            <motion.div {...float}>
+                                <Box
+                                    component="img"
+                                    src={ProfilePic}
+                                    alt="Profile"
+                                    sx={{
+                                        width: '70vh',
+                                        height: '70vh',
+                                        borderRadius: '20%',
+                                        border: '6px solid white',
+                                        boxShadow: 4,
+                                        objectFit: 'contained',
+                                    }}
+                                />
+                            </motion.div>
                         </Box>
                     </Box>
                 </Container>
@@ -270,25 +304,28 @@ export default function Home() {
 
             {/* skills section  */}
 
-            <Box
-                sx={{
-
-                    p: 4,
-                    color: 'white',
-                    boxShadow: 4,
-                    bgcolor: '#eaeaea'
-                }}
-            >
-                <Typography variant="h4" fontWeight="bold" gutterBottom textAlign="center" color="#545fc4" fontFamily={'poppin-bold'}>
-                    My Design Skills
-                </Typography>
-                <Typography variant="body1" sx={{ mb: 4 }} textAlign="center" color="#545fc4">
-                    Crafting creative visuals from concept to completion.
+            <>
+                <Typography
+                    fontSize={30}
+                    fontWeight={800}
+                    textAlign="center"
+                    mb={2}
+                    mt={4}
+                    width="100%"
+                >
+                    My Designing Skills
                 </Typography>
 
-                <Grid container spacing={3} justifyContent="center">
+                <Grid
+                    container
+                    spacing={3}
+                    justifyContent="center"
+                    bgcolor="#f8f9fa"
+                    height="80vh"
+                    sx={{ display: 'flex' }}
+                >
                     {skills.map((skill, index) => (
-                        <Grid item xs={12} sm={6} md={4} key={index}>
+                        <Grid item xs={12} sm={6} md={4} key={index} mt={2}>
                             <motion.div
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
@@ -296,22 +333,33 @@ export default function Home() {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                             >
-                                <Card sx={{ textAlign: 'center', borderRadius: 2, p: 2 }}>
-                                    <CardMedia
-                                        component="img"
-                                        image={skill.image}
-                                        alt={skill.title}
-                                        sx={{ width: 64, height: 64, mx: 'auto', mb: 1 }}
-                                    />
-                                    <CardContent>
-                                        <Typography variant="h6">{skill.title}</Typography>
-                                    </CardContent>
-                                </Card>
+                                <motion.div {...pulse}>
+                                    <Card
+                                        sx={{
+                                            textAlign: 'center',
+                                            borderRadius: 2,
+                                            p: 2,
+                                            height: '100%',
+                                        }}
+                                    >
+                                        <CardMedia
+                                            component="img"
+                                            image={skill.image}
+                                            alt={skill.title}
+                                            sx={{ width: 64, height: 64, mx: 'auto', mb: 1 }}
+                                        />
+                                        <CardContent>
+                                            <Typography variant="h6">{skill.title}</Typography>
+                                        </CardContent>
+                                    </Card>
+                                </motion.div>
                             </motion.div>
                         </Grid>
                     ))}
                 </Grid>
-            </Box>
+            </>
+
+
 
             {/* Experiance section  */}
             <Box component="section" py={6} px={{ xs: 2, md: 6 }} bgcolor="#f8f9fa">
@@ -321,7 +369,7 @@ export default function Home() {
                 <Grid container spacing={4} >
                     {experiences.map((exp, index) => (
                         <Grid item xs={12} md={6} key={index} sx={{ p: 3, borderRadius: 2, height: '100%', width: '100%' }}>
-                            <Paper elevation={2} sx={{ p: 3, borderRadius: 2, height: '100%', width: '100%', background: 'linear-gradient(90deg, #545fc4 , #120343ff)', color: 'white' }}>
+                            <Paper elevation={2} sx={{ p: 3, borderRadius: 2, height: '100%', width: '100%', background: 'linear-gradient(90deg, #120343ff)', color: 'white' }}>
                                 <Typography variant="h6" fontWeight="bold">
                                     {exp.role}
                                 </Typography>
@@ -344,7 +392,7 @@ export default function Home() {
 
             {/* Education section  */}
 
-            <Box id="education" sx={{ py: 6, px: { xs: 2, md: 6 }, backgroundColor: '#545fc4' }}>
+            <Box id="education" sx={{ py: 6, px: { xs: 2, md: 6 }, backgroundColor: '#020e4aff' }}>
                 <Typography variant="h4" align="center" gutterBottom fontWeight={700}>
                     🎓 My Education
                 </Typography>
@@ -356,7 +404,7 @@ export default function Home() {
                         <Box width={'100%'} height={'100px'}> {<FontAwesomeIcon icon={faGraduationCap} size="2x" color="white" />} <Typography color={'white'} sx={{ ml: '40px' }}> <strong>Metriculation</strong> <br />City public school skardu <br /> 2019-2021</Typography></Box>
                     </Grid>
 
-                    <Grid  width={'50%'}
+                    <Grid width={'50%'}
                         component={'img'}
                         src={pogo}
                     ></Grid>
@@ -382,7 +430,7 @@ export default function Home() {
                         />
 
                         {/* this is the main box */}
-                        
+
                     </Box>
                 </Grid>
 
@@ -420,3 +468,5 @@ export default function Home() {
         </Box>
     );
 }
+
+
