@@ -13,6 +13,8 @@ import des3 from '../../public/Designes/kal.jpg';
 import des4 from '../../public/Designes/qq.png';
 import des5 from '../../public/Designes/qq.png';
 
+import bg from '../../public/Designes/bg.png';
+
 import blog from '../../public/image/12.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
@@ -451,7 +453,9 @@ export default function Home() {
 
             {/* Education section  */}
 
-            <Box id="education" sx={{ py: 6, px: { xs: 2, md: 6 }, backgroundColor: '#030303ff', width: '96%', ml: 3, borderRadius: '6px' }}>
+            <Box id="education" 
+            sx={{ py: 6, px: { xs: 2, md: 6 }, backgroundImage: `url(${bg})`,backgroundSize:'cover',  backgroundPosition: 'center top -100px', width: '96%', ml: 3, borderRadius: '6px' }}
+            >
                 <Typography variant="h4" align="center" gutterBottom fontWeight={700} color="white">
                     {<FontAwesomeIcon icon={faGraduationCap} size="1x" color="white" />} My Education
                 </Typography>
@@ -463,10 +467,10 @@ export default function Home() {
                         <Box width={'100%'} height={'100px'}> {<FontAwesomeIcon icon={faGraduationCap} size="2x" color="white" />} <Typography color={'white'} sx={{ ml: '40px' }}> <strong>Metriculation</strong> <br />City public school skardu <br /> 2019-2021</Typography></Box>
                     </Grid>
 
-                    <Grid width={'50%'}
+                    {/* <Grid width={'50%'}
                         component={'img'}
                         src={pogo}
-                    ></Grid>
+                    ></Grid> */}
                 </Grid>
             </Box>
 
