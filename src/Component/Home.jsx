@@ -50,19 +50,19 @@ const rotate = {
 
 
 const scrollOpenVariant = (index) => ({
-  hidden: {
-    width: 0,
-    opacity: 0,
-  },
-  visible: {
-    width: '100%',
-    opacity: 1,
-    transition: {
-      duration: 1.2,
-      delay: index * 1.2,
-      ease: 'easeOut',
+    hidden: {
+        width: 0,
+        opacity: 0,
     },
-  },
+    visible: {
+        width: '100%',
+        opacity: 1,
+        transition: {
+            duration: 1.2,
+            delay: index * 1.2,
+            ease: 'easeOut',
+        },
+    },
 });
 
 
@@ -233,102 +233,102 @@ export default function Home() {
                     },
                 }}
             >
-            
-                    <Box
-                        sx={{
-                            display: 'flex',
-                            flexDirection: { xs: 'column', md: 'row' },
-                            alignItems: 'center',
-                            textAlign: { xs: 'center', md: 'left' },
-                            px: 2,
-                            py: 4,
-                            width:'100%',
-                        }}
-                        gap={4}
-                    >
-                        {/* Left Side: Text Content */}
-                        <Box sx={{ flex: 1, width:'100%',ml:{xs:0,sm:0,md:'20px'}}}>
-                            <Box maxWidth="100%">
-                                <Typography
-                                    variant="h3"
-                                    fontWeight="bold"
-                                    sx={{
-                                        background: "linear-gradient(to right, #E0E0E0, #1e3c72, #FAFAFA, #dca138, #E0E0E0)",
-                                        backgroundSize: "190% auto",
-                                        fontWeight: 800,
-                                        WebkitBackgroundClip: "text",
-                                        WebkitTextFillColor: "transparent",
-                                        animation: "gradient 6s linear infinite",
-                                        "@keyframes gradient": {
-                                            "0%": { backgroundPosition: "0% center" },
-                                            "100%": { backgroundPosition: "200% center" },
-                                        },
-                                    }}
-                                >
-                                    SYED SIBTAIN KAXMI
-                                </Typography>
 
-                                <Typography variant="h6" color="white" mt={2} sx={{ width: '100%' }}>
-                                    I’m a passionate and detail-driven graphic designer with over 3 years of experience in creating impactful visual designs. Currently, I’m working as a Senior Graphic Designer at Netbots, where I lead branding and visual design projects for various clients across different industries.
-                                    <br /><br />
-                                    My expertise lies in logo design, brand identity, social media posts, marketing materials, and print design. I believe in blending creativity with clarity to deliver designs that not only look beautiful but also communicate effectively.
+                <Box
+                    sx={{
+                        display: 'flex',
+                        flexDirection: { xs: 'column', md: 'row' },
+                        alignItems: 'center',
+                        textAlign: { xs: 'center', md: 'left' },
+                        px: 2,
+                        py: 4,
+                        width: '100%',
+                    }}
+                    gap={4}
+                >
+                    {/* Left Side: Text Content */}
+                    <Box sx={{ flex: 1, width: '100%', ml: { xs: 0, sm: 0, md: '20px' } }}>
+                        <Box maxWidth="100%">
+                            <Typography
+                                variant="h3"
+                                fontWeight="bold"
+                                sx={{
+                                    background: "linear-gradient(to right, #E0E0E0, #1e3c72, #FAFAFA, #dca138, #E0E0E0)",
+                                    backgroundSize: "190% auto",
+                                    fontWeight: 800,
+                                    WebkitBackgroundClip: "text",
+                                    WebkitTextFillColor: "transparent",
+                                    animation: "gradient 6s linear infinite",
+                                    "@keyframes gradient": {
+                                        "0%": { backgroundPosition: "0% center" },
+                                        "100%": { backgroundPosition: "200% center" },
+                                    },
+                                }}
+                            >
+                                SYED SIBTAIN KAXMI
+                            </Typography>
 
-                                </Typography>
-                            </Box>
+                            <Typography variant="h6" color="white" mt={2} sx={{ width: '100%' }}>
+                                I’m a passionate and detail-driven graphic designer with over 3 years of experience in creating impactful visual designs. Currently, I’m working as a Senior Graphic Designer at Netbots, where I lead branding and visual design projects for various clients across different industries.
+                                <br /><br />
+                                My expertise lies in logo design, brand identity, social media posts, marketing materials, and print design. I believe in blending creativity with clarity to deliver designs that not only look beautiful but also communicate effectively.
 
-                            {/* Buttons */}
-                            <Box mt={3} display="flex" gap={2} flexWrap="wrap" justifyContent={{ xs: 'center', md: 'flex-start' }}>
-                                <Button
-                                    variant="contained"
-                                    color="primary"
-                                    size="large"
-                                    sx={{ px: 4, textTransform: "none" }}
-                                >
-                                    Build your Design →
-                                </Button>
-                                <Button
-                                    variant="outlined"
-                                    size="large"
-                                    href="https://wa.me/923407620765"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    sx={{
-                                        px: 4,
-                                        textTransform: "none",
-                                        borderColor: "grey.700",
-                                        color: "grey.300",
-                                        "&:hover": {
-                                            borderColor: "grey.500",
-                                            backgroundColor: "rgba(255, 255, 255, 0.04)",
-                                        },
-                                    }}
-                                >
-                                    WhatsApp
-                                </Button>
-                            </Box>
+                            </Typography>
                         </Box>
 
-                        {/* Right Side: Profile Image */}
-
-                        <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center' ,width:'10px' }}>
-                            <motion.div {...float}>
-                                <Box
-                                    component="img"
-                                    src={ProfilePic}
-                                    alt="Profile"
-                                    sx={{
-                                        width: '70vh',
-                                        height: '70vh',
-                                        borderRadius: '20%',
-                                        border: '6px solid white',
-                                        boxShadow: 4,
-                                        objectFit: 'contained',
-                                    }}
-                                />
-                            </motion.div>
+                        {/* Buttons */}
+                        <Box mt={3} display="flex" gap={2} flexWrap="wrap" justifyContent={{ xs: 'center', md: 'flex-start' }}>
+                            <Button
+                                variant="contained"
+                                color="primary"
+                                size="large"
+                                sx={{ px: 4, textTransform: "none" }}
+                            >
+                                Build your Design →
+                            </Button>
+                            <Button
+                                variant="outlined"
+                                size="large"
+                                href="https://wa.me/923407620765"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                sx={{
+                                    px: 4,
+                                    textTransform: "none",
+                                    borderColor: "grey.700",
+                                    color: "grey.300",
+                                    "&:hover": {
+                                        borderColor: "grey.500",
+                                        backgroundColor: "rgba(255, 255, 255, 0.04)",
+                                    },
+                                }}
+                            >
+                                WhatsApp
+                            </Button>
                         </Box>
                     </Box>
-           
+
+                    {/* Right Side: Profile Image */}
+
+                    <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center', width: '10px' }}>
+                        <motion.div {...float}>
+                            <Box
+                                component="img"
+                                src={ProfilePic}
+                                alt="Profile"
+                                sx={{
+                                    width: '70vh',
+                                    height: '70vh',
+                                    borderRadius: '20%',
+                                    border: '6px solid white',
+                                    boxShadow: 4,
+                                    objectFit: 'contained',
+                                }}
+                            />
+                        </motion.div>
+                    </Box>
+                </Box>
+
             </Box>
 
 
@@ -422,55 +422,55 @@ export default function Home() {
             </Box> */}
 
 
-<Box component="section" py={6} px={{ xs: 2, md: 6 }} bgcolor="#f8f9fa">
-      <Typography variant="h4" fontWeight="bold" gutterBottom sx={{textAlign:'center'}} >
-        Graphic Design Experience
-      </Typography>
-      <Grid container spacing={4}>
-        {experiences.map((exp, index) => (
-          <Grid
-            item
-            xs={12}
-            md={6}
-            key={index}
-            sx={{ p: 3, borderRadius: 2 }}
-          >
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={scrollOpenVariant(index)}
-              style={{
-                overflow: 'hidden',
-                borderRadius: 12,
-              }}
-            >
-              <Paper
-                elevation={2}
-                sx={{
-                  p: 3,
-                  background: 'linear-gradient(90deg, #120343ff)',
-                  color: 'white',
-                }}
-              >
-                <Typography variant="h6" fontWeight="bold">
-                  {exp.role}
+            <Box component="section" py={6} px={{ xs: 2, md: 6 }} bgcolor="#f8f9fa">
+                <Typography variant="h4" fontWeight="bold" gutterBottom sx={{ textAlign: 'center' }} >
+                    Graphic Design Experience
                 </Typography>
-                <Typography variant="subtitle1" color="white">
-                  {exp.company} | {exp.duration}
-                </Typography>
-                <ul style={{ marginTop: 10 }}>
-                  {exp.highlights.map((point, idx) => (
-                    <li key={idx}>
-                      <Typography variant="body2">{point}</Typography>
-                    </li>
-                  ))}
-                </ul>
-              </Paper>
-            </motion.div>
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
+                <Grid container spacing={4}>
+                    {experiences.map((exp, index) => (
+                        <Grid
+                            item
+                            xs={12}
+                            md={6}
+                            key={index}
+                            sx={{ p: 3, borderRadius: 2 }}
+                        >
+                            <motion.div
+                                initial="hidden"
+                                animate="visible"
+                                variants={scrollOpenVariant(index)}
+                                style={{
+                                    overflow: 'hidden',
+                                    borderRadius: 12,
+                                }}
+                            >
+                                <Paper
+                                    elevation={2}
+                                    sx={{
+                                        p: 3,
+                                        background: 'linear-gradient(90deg, #120343ff)',
+                                        color: 'white',
+                                    }}
+                                >
+                                    <Typography variant="h6" fontWeight="bold">
+                                        {exp.role}
+                                    </Typography>
+                                    <Typography variant="subtitle1" color="white">
+                                        {exp.company} | {exp.duration}
+                                    </Typography>
+                                    <ul style={{ marginTop: 10 }}>
+                                        {exp.highlights.map((point, idx) => (
+                                            <li key={idx}>
+                                                <Typography variant="body2">{point}</Typography>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </Paper>
+                            </motion.div>
+                        </Grid>
+                    ))}
+                </Grid>
+            </Box>
 
             {/* Education section  */}
 
