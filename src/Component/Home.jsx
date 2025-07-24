@@ -1,16 +1,19 @@
 import { Box, Button, Container, Typography, Grid, Card, CardContent, CardMedia, CardActionArea, Paper } from "@mui/material";
 import { motion } from 'framer-motion';
-import pogo from '../image/qq.png'
+import pogo from '../../public/image/qq.png'
 
-import landscape from '../image/SIB.jpg';
-import logo from '../image/logo.png';
-import ProfilePic from '../image/sib.png'
-import landing1 from '../image/12.jpg';
-import ecommerce from '../image/12.jpg';
-import portfolio from '../image/12.jpg';
-import mobileapp from '../image/12.jpg';
-import dashboard from '../image/12.jpg';
-import blog from '../image/12.jpg';
+import landscape from '../../public/image/SIB.jpg';
+import logo from '../../public/image/logo.png';
+import ProfilePic from '../../public/image/sib.png'
+
+import landing1 from '../../public/Designes/qq.png';
+import des1 from '../../public/Designes/aa.png';
+import des2 from '../../public/Designes/asa.png';
+import des3 from '../../public/Designes/kal.jpg';
+import des4 from '../../public/Designes/qq.png';
+import des5 from '../../public/Designes/qq.png';
+
+import blog from '../../public/image/12.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 
@@ -51,15 +54,16 @@ const rotate = {
 
 const scrollOpenVariant = (index) => ({
     hidden: {
-        width: 0,
+        width: 100,
         opacity: 0,
     },
     visible: {
         width: '100%',
         opacity: 1,
+        zIndex:1,
         transition: {
-            duration: 1.2,
-            delay: index * 1.2,
+            duration: 5,
+            delay: index * 0,
             ease: 'easeOut',
         },
     },
@@ -156,23 +160,23 @@ export default function Home() {
         },
         {
             title: 'E-commerce UI',
-            image: ecommerce,
+            image: des1,
         },
         {
             title: 'Portfolio UI',
-            image: portfolio,
+            image: des2,
         },
         {
             title: 'Mobile App Design',
-            image: mobileapp,
+            image: des3,
         },
         {
             title: 'Admin Dashboard',
-            image: dashboard,
+            image: des4,
         },
         {
             title: 'Blog Template',
-            image: blog,
+            image: des5,
         },
     ];
 
@@ -394,34 +398,7 @@ export default function Home() {
 
 
             {/* Experiance section  */}
-            {/* <Box component="section" py={6} px={{ xs: 2, md: 6 }} bgcolor="#f8f9fa">
-                <Typography variant="h4" fontWeight="bold" gutterBottom>
-                    Graphic Design Experience
-                </Typography>
-                <Grid container spacing={4} >
-                    {experiences.map((exp, index) => (
-                        <Grid item xs={12} md={6} key={index} sx={{ p: 3, borderRadius: 2, height: '100%', width: '100%' }}>
-                            <Paper elevation={2} sx={{ p: 3, borderRadius: 2, height: '100%', width: '100%', background: 'linear-gradient(90deg, #120343ff)', color: 'white' }}>
-                                <Typography variant="h6" fontWeight="bold">
-                                    {exp.role}
-                                </Typography>
-                                <Typography variant="subtitle1" color="white">
-                                    {exp.company} | {exp.duration}
-                                </Typography>
-                                <ul style={{ marginTop: 10 }}>
-                                    {exp.highlights.map((point, idx) => (
-                                        <li key={idx}>
-                                            <Typography variant="body2">{point}</Typography>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </Paper>
-                        </Grid>
-                    ))}
-                </Grid>
-            </Box> */}
-
-
+            
             <Box component="section" py={6} px={{ xs: 2, md: 6 }} bgcolor="#f8f9fa">
                 <Typography variant="h4" fontWeight="bold" gutterBottom sx={{ textAlign: 'center' }} >
                     Graphic Design Experience
@@ -433,7 +410,7 @@ export default function Home() {
                             xs={12}
                             md={6}
                             key={index}
-                            sx={{ p: 3, borderRadius: 2 }}
+                            sx={{ p: 3, borderRadius: 2 ,width:'100%'}}
                         >
                             <motion.div
                                 initial="hidden"
@@ -507,9 +484,10 @@ export default function Home() {
                         <Box
                             component={'img'}
                             src={designs[0].image}
-                            height={'494px'}
+                            height={'300px'}
                             width={"100%"}
                         />
+                      
 
                         {/* this is the main box */}
 
@@ -548,14 +526,14 @@ export default function Home() {
                                         height="49%"
                                         width="98%"
                                         component="img"
-                                        src={designs[0].image}
+                                        src={designs[1].image}
                                         sx={{ objectFit: 'cover', borderRadius: 2 }}
                                     />
                                     <Box
                                         height="49%"
                                         width="98%"
                                         component="img"
-                                        src={designs[0].image}
+                                        src={designs[2].image}
                                         sx={{ objectFit: 'cover', borderRadius: 2 }}
                                     />
                                 </Grid>
@@ -566,7 +544,7 @@ export default function Home() {
                                         height="100%"
                                         width="100%"
                                         component="img"
-                                        src={designs[0].image}
+                                        src={designs[3].image}
                                         sx={{ objectFit: 'cover', borderRadius: 2 }}
                                     />
                                 </Grid>

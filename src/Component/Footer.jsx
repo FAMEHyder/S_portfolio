@@ -20,7 +20,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
-import backgroundImageUrl from '../image/11.jpeg';
+import backgroundImageUrl from '../../public/image/11.jpeg';
 
 const Footer = () => {
   const formik = useFormik({

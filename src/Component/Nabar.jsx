@@ -9,7 +9,7 @@ import {
   Avatar,
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import profile from '../image/00000.png'; // Make sure this path is valid
+import profile from '../../public/image/00000.png'; // Make sure this path is valid
 
 export default function Nabar() {
   const navigate = useNavigate();
