@@ -226,7 +226,7 @@ export default function Home() {
                     },
                 }}
             >
-                <Container sx={{ widtrh: '50%' }}>
+            
                     <Box
                         sx={{
                             display: 'flex',
@@ -235,18 +235,19 @@ export default function Home() {
                             textAlign: { xs: 'center', md: 'left' },
                             px: 2,
                             py: 4,
+                            width:'100%',
                         }}
                         gap={4}
                     >
                         {/* Left Side: Text Content */}
-                        <Box sx={{ flex: 1 }}>
+                        <Box sx={{ flex: 1, width:'100%',ml:{xs:0,sm:0,md:'20px'}}}>
                             <Box maxWidth="100%">
                                 <Typography
                                     variant="h3"
                                     fontWeight="bold"
                                     sx={{
                                         background: "linear-gradient(to right, #E0E0E0, #1e3c72, #FAFAFA, #dca138, #E0E0E0)",
-                                        backgroundSize: "200% auto",
+                                        backgroundSize: "190% auto",
                                         fontWeight: 800,
                                         WebkitBackgroundClip: "text",
                                         WebkitTextFillColor: "transparent",
@@ -302,7 +303,7 @@ export default function Home() {
 
                         {/* Right Side: Profile Image */}
 
-                        <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+                        <Box sx={{ flex: 1, display: 'flex', justifyContent: 'center' ,width:'10px' }}>
                             <motion.div {...float}>
                                 <Box
                                     component="img"
@@ -320,7 +321,7 @@ export default function Home() {
                             </motion.div>
                         </Box>
                     </Box>
-                </Container>
+           
             </Box>
 
 
@@ -459,7 +460,7 @@ export default function Home() {
                 </Grid>
 
                 {/* This is the next grid  */}
-                <Grid mt={10}>
+                <Grid mt={10} ml={2}>
                     <Box display="flex" width="100%">
 
                         {/* Text Section with animation */}
