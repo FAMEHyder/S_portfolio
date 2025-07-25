@@ -127,10 +127,10 @@ export default function Home() {
             title: 'Matriculation',
             school: 'City Public School and College',
             year: '2019-2020',
-            image: '/images/matric.jpg', // replace with your local/hosted image path
+            image: '/images/matric.jpg', 
         },
         {
-            title: 'Intermediate ',
+            title: 'Intermediate/',
             school: 'Degree College Skardu',
             year: '2021-2022',
             image: '/images/fsc.jpg',
