@@ -130,7 +130,7 @@ export default function Home() {
             image: '/images/matric.jpg', 
         },
         {
-            title: 'Intermediate / ',
+            title: 'Intermediate / F',
             school: 'Degree College Skardu',
             year: '2021-2022',
             image: '/images/fsc.jpg',
